@@ -71,7 +71,7 @@
 
     /* Hero */
     .hero{
-      display:grid;grid-template-columns: 1.25fr .75fr;gap:18px;
+      display:grid;grid-template-columns: 1.15fr .85fr;gap:18px;
       padding:24px;border:1px solid var(--line);
       background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
       border-radius: calc(var(--radius) + 6px);
@@ -99,6 +99,7 @@
     }
     .lead{color:var(--muted);font-size:16px;max-width:60ch;margin:0 0 16px}
     .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .trust-line{margin-top:12px;color:var(--muted);font-size:13px}
     .btn{
       display:inline-flex;align-items:center;gap:10px;
       padding:12px 14px;border-radius:14px;
@@ -114,24 +115,17 @@
       box-shadow: 0 18px 50px rgba(24,194,178,.18);
     }
     .btn-primary:hover{filter: brightness(1.05)}
-    .hero-right{
-      display:flex;flex-direction:column;gap:12px;justify-content:center
-    }
-    .mini{
+    .hero-panel{
       border:1px solid var(--line);
       background: rgba(0,0,0,.18);
       border-radius: var(--radius);
-      padding:14px;
+      padding:18px;
+      display:flex;flex-direction:column;gap:12px;justify-content:center
     }
-    .mini b{display:block;margin-bottom:6px}
-    .mini p{margin:0;color:var(--muted);font-size:14px}
-    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .tag{
-      font-size:12px;color:var(--muted);
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      padding:7px 10px;border-radius:999px
-    }
+    .hero-panel h2{margin:0 0 6px;font-size:16px}
+    .hero-panel p{margin:0;color:var(--muted);font-size:14px}
+    .hero-list{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+    .divider{height:1px;background:var(--line);margin:6px 0}
 
     /* Sections */
     .section{margin-top:22px}
@@ -259,41 +253,40 @@
     <!-- Hero -->
     <section class="hero" id="inicio">
       <div>
-        <div class="kicker">✨ Diseño moderno · 📱 móvil · 🟢 WhatsApp · 📍 Google</div>
-        <h1>Haz que tu negocio se vea <span style="opacity:.92">premium</span> en internet</h1>
+        <div class="kicker">Webs rápidas para negocios locales</div>
+        <h1>Una web clara que convierte visitas en clientes</h1>
         <p class="lead">
-          Creo webs limpias y profesionales para negocios locales. Enfocadas en una cosa:
-          que te encuentren, confíen en ti y te contacten.
+          Diseño limpio, mensajes directos y llamadas a la acción para que te contacten sin dudar.
         </p>
 
         <div class="cta">
           <a class="btn btn-primary" href="https://wa.me/34633936388">🟢 Pedir web por WhatsApp</a>
           <a class="btn" href="#demos">Ver demos</a>
-          <a class="btn" href="#servicio">Qué incluye</a>
         </div>
 
-        <div class="tags">
-          <span class="tag">⏱️ Entrega rápida</span>
-          <span class="tag">✅ Adaptada a móvil</span>
-          <span class="tag">🔎 Preparada para Google</span>
-          <span class="tag">🧩 Fácil de actualizar</span>
-        </div>
+        <div class="trust-line">Entrega en pocos días · Diseño móvil · WhatsApp visible · Base SEO</div>
       </div>
 
-      <div class="hero-right">
-        <div class="mini">
-          <b>Ideal para</b>
-          <p>Bares · restaurantes · peluquerías · talleres · clínicas · tiendas</p>
+      <aside class="hero-panel">
+        <div>
+          <h2>Ideal para</h2>
+          <ul class="hero-list">
+            <li>Restaurantes y bares</li>
+            <li>Peluquerías y estética</li>
+            <li>Clínicas, talleres y tiendas</li>
+          </ul>
         </div>
-        <div class="mini">
-          <b>Tu cliente hace clic y…</b>
-          <p>📞 te llama · 🟢 WhatsApp · 📍 llega con el mapa · 🕒 ve horarios · 🧾 ve servicios</p>
+        <div class="divider"></div>
+        <div>
+          <h2>Tu cliente hace clic y…</h2>
+          <p>Te llama, te escribe por WhatsApp o llega con el mapa.</p>
         </div>
-        <div class="mini">
-          <b>Mi promesa</b>
-          <p>Sin complicaciones. Te lo dejo listo y bonito. Tú solo me pasas lo básico.</p>
+        <div class="divider"></div>
+        <div>
+          <h2>Mi promesa</h2>
+          <p>Sin complicaciones. Te lo dejo listo y bonito.</p>
         </div>
-      </div>
+      </aside>
     </section>
 
     <!-- Service -->
@@ -305,28 +298,16 @@
 
       <div class="grid grid-3">
         <div class="card">
-          <h2>📱 Diseño móvil primero</h2>
-          <p>Se ve perfecto en móvil, que es donde entra casi todo el mundo.</p>
+          <h2>📱 Móvil + velocidad</h2>
+          <p>Se ve perfecto en móvil y carga rápido.</p>
         </div>
         <div class="card">
-          <h2>🟢 WhatsApp a un clic</h2>
-          <p>Botón visible para que te escriban sin pensarlo.</p>
-        </div>
-        <div class="card">
-          <h2>📍 Mapa + datos claros</h2>
-          <p>Ubicación, horarios y contacto, sin perderse.</p>
-        </div>
-        <div class="card">
-          <h2>🖼️ Fotos + servicios</h2>
-          <p>Galería sencilla y secciones con lo importante.</p>
-        </div>
-        <div class="card">
-          <h2>⚡ Carga rápida</h2>
-          <p>Web ligera. Nada de cosas que tardan siglos.</p>
+          <h2>🟢 Contacto directo</h2>
+          <p>WhatsApp, teléfono y mapa visibles desde el primer vistazo.</p>
         </div>
         <div class="card">
           <h2>🔎 Preparada para Google</h2>
-          <p>Estructura correcta y base para posicionar tu negocio.</p>
+          <p>Estructura clara y base SEO para encontrarte.</p>
         </div>
       </div>
     </div>
