@@ -109,7 +109,7 @@
       background:rgba(0,0,0,.35);
       backdrop-filter:blur(6px);
     }
-    .icon-circle img{width:52px;height:52px;object-fit:contain}
+    
 
     .wrap{max-width:1100px;margin:0 auto;padding:60px 18px 90px}
     .section{margin-top:40px}
@@ -138,7 +138,7 @@
     }
     @media (max-width: 600px){
       .icon-nav{bottom:16px;gap:14px}
-      .icon-circle{width:44px;height:44px}
+      .icon-img{width:72px;height:72px;object-fit:contain;display:block;filter:drop-shadow(0 6px 10px rgba(0,0,0,.35))}
       .hero{padding-bottom:140px}
     }
   </style>
@@ -158,19 +158,19 @@
 
     <nav class="icon-nav" aria-label="Accesos rapidos">
       <a class="icon-link" href="#restaurante">
-        <span class="icon-circle" aria-hidden="true"><img src="assets/icon-restaurante.png" alt="" /></span>
+        <img class="icon-img" src="assets/icon-restaurante.png" alt="" />
         <span>El Plan B</span>
       </a>
       <a class="icon-link" href="#carta">
-        <span class="icon-circle" aria-hidden="true"><img src="assets/icon-carta.png" alt="" /></span>
+        <img class="icon-img" src="assets/icon-carta.png" alt="" />
         <span>Nuestra carta</span>
       </a>
       <a class="icon-link" href="#reserva">
-        <span class="icon-circle" aria-hidden="true"><img src="assets/icon-reservar.png" alt="" /></span>
+        <img class="icon-img" src="assets/icon-reservar.png" alt="" />
         <span>Reservar</span>
       </a>
       <a class="icon-link" href="#contacto">
-        <span class="icon-circle" aria-hidden="true"><img src="assets/icon-contacto.png" alt="" /></span>
+        <img class="icon-img" src="assets/icon-contacto.png" alt="" />
         <span>Contacto</span>
       </a>
     </nav>
