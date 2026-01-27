@@ -1,37 +1,46 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Webs bonitas y efectivas para negocios | iM1GU1</title>
   <meta name="description" content="Creo webs modernas para negocios locales: rápidas, móviles, WhatsApp y Google. Diseño limpio y profesional." />
+  <meta name="theme-color" content="#0f1218" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     :root{
-      --bg: #0b1220;
+      --bg: #0f1218;
+      --bg-2: #111826;
       --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.08);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.70);
+      --card-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.94);
+      --muted: rgba(255,255,255,.7);
       --line: rgba(255,255,255,.12);
-      --shadow: 0 20px 60px rgba(0,0,0,.45);
-      --r: 18px;
+      --accent: #18c2b2;
+      --accent-2: #ffb347;
+      --shadow: 0 28px 70px rgba(0,0,0,.45);
+      --radius: 18px;
     }
 
     *{box-sizing:border-box}
     html,body{margin:0}
     body{
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1200px 700px at 20% -10%, rgba(83, 158, 255,.22), transparent 60%),
-                  radial-gradient(900px 600px at 90% 10%, rgba(162, 78, 255,.18), transparent 55%),
-                  radial-gradient(1000px 700px at 50% 120%, rgba(0, 255, 204,.10), transparent 55%),
-                  var(--bg);
+      font-family: "Sora", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+      background:
+        radial-gradient(1100px 700px at 15% -10%, rgba(24, 194, 178,.22), transparent 60%),
+        radial-gradient(900px 600px at 90% 10%, rgba(255, 179, 71,.18), transparent 55%),
+        radial-gradient(1000px 700px at 50% 120%, rgba(98, 154, 255,.10), transparent 55%),
+        var(--bg);
       color: var(--text);
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     a{color:inherit}
-    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 80px}
+    .wrap{max-width:1120px;margin:0 auto;padding:30px 18px 90px}
 
     /* Top bar */
     .top{
@@ -39,32 +48,33 @@
       gap:14px;margin-bottom:18px
     }
     .brand{
-      display:flex;align-items:center;gap:10px;
+      display:flex;align-items:center;gap:12px;
       text-decoration:none
     }
     .logo{
-      width:42px;height:42px;border-radius:14px;
-      background: linear-gradient(135deg, rgba(83,158,255,.95), rgba(162,78,255,.95));
-      box-shadow: 0 16px 40px rgba(0,0,0,.35);
-      display:grid;place-items:center;font-weight:900;
+      width:46px;height:46px;border-radius:14px;
+      background: linear-gradient(135deg, rgba(24,194,178,.95), rgba(255,179,71,.95));
+      box-shadow: 0 18px 45px rgba(0,0,0,.35);
+      display:grid;place-items:center;font-weight:800;
       letter-spacing:.6px
     }
-    .brand small{display:block;color:var(--muted);margin-top:1px}
+    .brand strong{font-family:"Fraunces", serif;font-size:18px}
+    .brand small{display:block;color:var(--muted);margin-top:2px}
     .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
     .pill{
       border:1px solid var(--line);
       background: rgba(255,255,255,.04);
       padding:10px 12px;border-radius:999px;
-      text-decoration:none;font-weight:650;font-size:14px
+      text-decoration:none;font-weight:600;font-size:13px
     }
     .pill:hover{background: rgba(255,255,255,.07)}
 
     /* Hero */
     .hero{
-      display:grid;grid-template-columns: 1.2fr .8fr;gap:16px;
-      padding:22px;border:1px solid var(--line);
+      display:grid;grid-template-columns: 1.25fr .75fr;gap:18px;
+      padding:24px;border:1px solid var(--line);
       background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border-radius: calc(var(--r) + 6px);
+      border-radius: calc(var(--radius) + 6px);
       box-shadow: var(--shadow);
       position:relative;
       overflow:hidden;
@@ -72,33 +82,36 @@
     .hero:before{
       content:"";
       position:absolute;inset:-2px;
-      background: radial-gradient(600px 240px at 20% 10%, rgba(83,158,255,.20), transparent 60%),
-                  radial-gradient(520px 260px at 70% 0%, rgba(162,78,255,.18), transparent 60%);
+      background: radial-gradient(600px 260px at 20% 10%, rgba(24,194,178,.22), transparent 60%),
+                  radial-gradient(520px 260px at 80% 0%, rgba(255,179,71,.18), transparent 60%);
       pointer-events:none;
-      filter: blur(0px);
     }
     .hero > *{position:relative}
     .kicker{
       display:inline-flex;gap:8px;align-items:center;
-      font-weight:700;font-size:13px;color:var(--muted);
+      font-weight:600;font-size:12px;color:var(--muted);
       border:1px solid var(--line);
-      padding:8px 12px;border-radius:999px;background: rgba(0,0,0,.15)
+      padding:8px 12px;border-radius:999px;background: rgba(0,0,0,.18)
     }
-    h1{font-size:42px;line-height:1.1;margin:14px 0 10px}
+    h1{
+      font-family:"Fraunces", serif;
+      font-size:44px;line-height:1.05;margin:14px 0 10px
+    }
     .lead{color:var(--muted);font-size:16px;max-width:60ch;margin:0 0 16px}
     .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
     .btn{
       display:inline-flex;align-items:center;gap:10px;
       padding:12px 14px;border-radius:14px;
       border:1px solid var(--line);
-      text-decoration:none;font-weight:800;
+      text-decoration:none;font-weight:700;
       background: rgba(255,255,255,.06);
     }
     .btn:hover{background: rgba(255,255,255,.09)}
     .btn-primary{
       border:none;
-      background: linear-gradient(135deg, rgba(83,158,255,1), rgba(162,78,255,1));
-      box-shadow: 0 18px 50px rgba(83,158,255,.14);
+      color:#0b1212;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 18px 50px rgba(24,194,178,.18);
     }
     .btn-primary:hover{filter: brightness(1.05)}
     .hero-right{
@@ -107,7 +120,7 @@
     .mini{
       border:1px solid var(--line);
       background: rgba(0,0,0,.18);
-      border-radius: var(--r);
+      border-radius: var(--radius);
       padding:14px;
     }
     .mini b{display:block;margin-bottom:6px}
@@ -121,13 +134,13 @@
     }
 
     /* Sections */
-    .section{margin-top:18px}
+    .section{margin-top:22px}
     .grid{display:grid;gap:12px}
     .grid-3{grid-template-columns: repeat(3, minmax(0,1fr))}
     .grid-2{grid-template-columns: repeat(2, minmax(0,1fr))}
     @media (max-width: 940px){
       .hero{grid-template-columns:1fr}
-      h1{font-size:36px}
+      h1{font-size:38px}
     }
     @media (max-width: 760px){
       .grid-3,.grid-2{grid-template-columns:1fr}
@@ -136,7 +149,7 @@
     .card{
       border:1px solid var(--line);
       background: rgba(255,255,255,.05);
-      border-radius: var(--r);
+      border-radius: var(--radius);
       padding:16px;
     }
     .card:hover{background: rgba(255,255,255,.07)}
@@ -150,31 +163,50 @@
     .title-row h3{margin:0;font-size:18px}
     .title-row span{color:var(--muted);font-size:14px}
 
+    /* Demos */
+    .demo-card{
+      display:flex;flex-direction:column;gap:12px;
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+    }
+    .demo-card .demo-head{
+      display:flex;justify-content:space-between;align-items:center;gap:10px
+    }
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:12px;color:var(--muted);
+      border:1px solid var(--line);
+      padding:6px 10px;border-radius:999px;background: rgba(0,0,0,.15)
+    }
+
     /* Pricing */
     .price{
       padding:18px;
       background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
     }
-    .price .badge{
-      display:inline-flex;align-items:center;gap:8px;
-      font-size:12px;color:var(--muted);
-      border:1px solid var(--line);
-      padding:7px 10px;border-radius:999px;background: rgba(0,0,0,.15);
-      margin-bottom:10px
-    }
-    .amount{font-size:30px;font-weight:900;margin:4px 0 10px}
+    .amount{font-size:30px;font-weight:800;margin:4px 0 10px}
     .price ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
     .price li{margin:6px 0}
     .price .buy{margin-top:14px}
+
+    /* Process */
+    .step{
+      display:flex;gap:12px;align-items:flex-start
+    }
+    .step .num{
+      width:36px;height:36px;border-radius:12px;
+      display:grid;place-items:center;font-weight:800;
+      background: rgba(24,194,178,.18);
+      border:1px solid rgba(24,194,178,.5)
+    }
 
     /* FAQ */
     details{
       border:1px solid var(--line);
       background: rgba(255,255,255,.04);
-      border-radius: var(--r);
+      border-radius: var(--radius);
       padding:12px 14px;
     }
-    summary{cursor:pointer;font-weight:800}
+    summary{cursor:pointer;font-weight:700}
     details p{color:var(--muted);margin:10px 0 0;font-size:14px}
 
     /* Floating CTA */
@@ -196,7 +228,7 @@
     }
     .floating .bar small{color:var(--muted)}
     .footer{
-      margin-top:22px;color:var(--muted);font-size:13px;
+      margin-top:24px;color:var(--muted);font-size:13px;
       display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap
     }
   </style>
@@ -206,16 +238,18 @@
   <div class="wrap">
     <!-- Top -->
     <div class="top">
-      <a class="brand" href="#">
+      <a class="brand" href="#inicio">
         <div class="logo">iM</div>
         <div>
-          <div style="font-weight:900">iM1GU1</div>
+          <strong>iM1GU1</strong>
           <small>Webs para negocios · rápido y sin líos</small>
         </div>
       </a>
 
       <div class="nav">
         <a class="pill" href="#servicio">Servicio</a>
+        <a class="pill" href="#proceso">Proceso</a>
+        <a class="pill" href="#demos">Demos</a>
         <a class="pill" href="#precios">Precios</a>
         <a class="pill" href="#faq">Dudas</a>
         <a class="pill" href="https://wa.me/34633936388">WhatsApp</a>
@@ -234,7 +268,7 @@
 
         <div class="cta">
           <a class="btn btn-primary" href="https://wa.me/34633936388">🟢 Pedir web por WhatsApp</a>
-          <a class="btn" href="#precios">Ver precios</a>
+          <a class="btn" href="#demos">Ver demos</a>
           <a class="btn" href="#servicio">Qué incluye</a>
         </div>
 
@@ -297,6 +331,71 @@
       </div>
     </div>
 
+    <!-- Process -->
+    <div class="section" id="proceso">
+      <div class="title-row">
+        <h3>Proceso simple</h3>
+        <span>De cero a web lista sin dolores de cabeza</span>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="step">
+            <div class="num">1</div>
+            <div>
+              <h2>Brief rápido</h2>
+              <p>Me pasas nombre, horarios, servicios y fotos (o te ayudo).</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="step">
+            <div class="num">2</div>
+            <div>
+              <h2>Diseño y ajuste</h2>
+              <p>Te enseño un borrador. Afinamos texto y estilo contigo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="step">
+            <div class="num">3</div>
+            <div>
+              <h2>Publicación</h2>
+              <p>La dejo online, optimizada y lista para recibir clientes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Demos -->
+    <div class="section" id="demos">
+      <div class="title-row">
+        <h3>Mis demos</h3>
+        <span>Diseños reales para que veas el estilo</span>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card demo-card">
+          <div class="demo-head">
+            <h2>🍽️ Demo restaurante</h2>
+            <span class="badge">Reservas + menú</span>
+          </div>
+          <p>Menú, fotos, reservas por WhatsApp y mapa integrado.</p>
+          <a class="btn" href="https://im1gu1.github.io/demo-restaurante" target="_blank" rel="noopener">Ver demo</a>
+        </div>
+        <div class="card demo-card">
+          <div class="demo-head">
+            <h2>💇 Demo peluquería</h2>
+            <span class="badge">Servicios + citas</span>
+          </div>
+          <p>Servicios, precios, testimonios y contacto rápido.</p>
+          <a class="btn" href="https://im1gu1.github.io/demo-peluqueria" target="_blank" rel="noopener">Ver demo</a>
+        </div>
+      </div>
+    </div>
+
     <!-- Pricing -->
     <div class="section" id="precios">
       <div class="title-row">
@@ -307,7 +406,7 @@
       <div class="grid grid-3">
         <div class="card price">
           <div class="badge">🚀 Recomendado para empezar</div>
-          <div style="font-weight:900;font-size:16px">One-Page Pro</div>
+          <div style="font-weight:800;font-size:16px">One-Page Pro</div>
           <div class="amount">450€</div>
           <ul>
             <li>1 página (todo en una)</li>
@@ -322,7 +421,7 @@
 
         <div class="card price">
           <div class="badge">✨ Más completa</div>
-          <div style="font-weight:900;font-size:16px">Web Negocio</div>
+          <div style="font-weight:800;font-size:16px">Web Negocio</div>
           <div class="amount">790€</div>
           <ul>
             <li>Hasta 4 secciones/páginas</li>
@@ -337,7 +436,7 @@
 
         <div class="card price">
           <div class="badge">🧩 Con extras</div>
-          <div style="font-weight:900;font-size:16px">Web + Extras</div>
+          <div style="font-weight:800;font-size:16px">Web + Extras</div>
           <div class="amount">desde 1.190€</div>
           <ul>
             <li>Más secciones y contenido</li>
@@ -359,25 +458,6 @@
         <div class="card">
           <h2>📌 Importante</h2>
           <p>Los precios pueden variar si necesitas texto/fotos desde cero o funciones extra.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mini portfolio / proof -->
-    <div class="section" id="ejemplos">
-      <div class="title-row">
-        <h3>Ejemplos / estilo</h3>
-        <span>Si aún no tienes portfolio, lo montamos con 2 demos</span>
-      </div>
-
-      <div class="grid grid-2">
-        <div class="card">
-          <h2>🍔 Demo bar/restaurante</h2>
-          <p>Página con menú, fotos, reservas por WhatsApp y mapa.</p>
-        </div>
-        <div class="card">
-          <h2>💈 Demo peluquería</h2>
-          <p>Servicios, precios, testimonios y contacto rápido.</p>
         </div>
       </div>
     </div>
@@ -419,7 +499,7 @@
   <div class="floating">
     <div class="bar">
       <div>
-        <div style="font-weight:900">¿Quieres una web así para tu negocio?</div>
+        <div style="font-weight:800">¿Quieres una web así para tu negocio?</div>
         <small>Te respondo por WhatsApp y te digo precio sin compromiso</small>
       </div>
       <a class="btn btn-primary" href="https://wa.me/34633936388">🟢 WhatsApp</a>

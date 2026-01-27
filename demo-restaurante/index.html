@@ -1,0 +1,289 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo Restaurante | Lumbre</title>
+  <meta name="description" content="Demo de restaurante con carta, reservas y ubicación. Diseño cálido y elegante para negocios gastronómicos." />
+  <meta name="theme-color" content="#17110f" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#17110f;
+      --bg-2:#1f1714;
+      --surface:#241b18;
+      --surface-2:#2c201c;
+      --text:#f8f1ea;
+      --muted:#d4c8be;
+      --line:rgba(255,255,255,.08);
+      --accent:#e0a458;
+      --accent-2:#c77d48;
+      --radius:18px;
+      --shadow:0 22px 60px rgba(0,0,0,.45);
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family:"Source Sans 3", sans-serif;
+      background:
+        radial-gradient(900px 500px at 10% -10%, rgba(224,164,88,.18), transparent 60%),
+        radial-gradient(800px 600px at 90% 0%, rgba(199,125,72,.16), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{color:inherit}
+    .wrap{max-width:1120px;margin:0 auto;padding:32px 18px 90px}
+
+    .top{
+      display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:18px
+    }
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .mark{
+      width:44px;height:44px;border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:grid;place-items:center;font-weight:700;color:#2c1a12
+    }
+    .brand strong{font-family:"Playfair Display", serif;font-size:18px}
+    .brand small{display:block;color:var(--muted);margin-top:2px}
+    .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .pill{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      padding:9px 12px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:600
+    }
+    .pill:hover{background:rgba(255,255,255,.08)}
+
+    .hero{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:18px;
+      padding:24px;border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border-radius:calc(var(--radius) + 6px);
+      box-shadow:var(--shadow);
+    }
+    .tag{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:12px;color:var(--muted);
+      border:1px solid var(--line);
+      padding:6px 10px;border-radius:999px;background:rgba(0,0,0,.18)
+    }
+    h1{
+      font-family:"Playfair Display", serif;
+      font-size:44px;line-height:1.05;margin:14px 0 10px
+    }
+    .lead{color:var(--muted);margin:0 0 16px;max-width:58ch}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 10px}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:12px 14px;border-radius:14px;border:1px solid var(--line);
+      text-decoration:none;font-weight:700;background:rgba(255,255,255,.05)
+    }
+    .btn:hover{background:rgba(255,255,255,.08)}
+    .btn-primary{
+      color:#2c1a12;border:none;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      box-shadow:0 18px 50px rgba(224,164,88,.2)
+    }
+    .hero-card{
+      display:flex;flex-direction:column;gap:12px;justify-content:center
+    }
+    .photo{
+      border-radius:var(--radius);
+      background:linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      min-height:220px;border:1px solid var(--line);
+      display:flex;align-items:flex-end;justify-content:space-between;
+      padding:16px
+    }
+    .photo span{font-size:12px;color:var(--muted)}
+    .info-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:10px}
+    .info{
+      border:1px solid var(--line);background:rgba(0,0,0,.18);
+      border-radius:var(--radius);padding:12px
+    }
+    .info b{display:block}
+    .info small{color:var(--muted)}
+
+    .section{margin-top:28px}
+    .title-row{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:12px}
+    .title-row h2{margin:0;font-size:22px}
+    .title-row span{color:var(--muted);font-size:14px}
+
+    .grid{display:grid;gap:12px}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+    .card{
+      border:1px solid var(--line);background:rgba(255,255,255,.04);
+      border-radius:var(--radius);padding:16px
+    }
+    .card h3{margin:0 0 8px;font-size:16px}
+    .menu-item{display:flex;justify-content:space-between;gap:10px;color:var(--muted);margin:6px 0}
+
+    .gallery{
+      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px
+    }
+    .gallery .shot{
+      min-height:160px;border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      display:flex;align-items:flex-end;justify-content:space-between;padding:14px
+    }
+
+    .map{
+      border:1px solid var(--line);border-radius:var(--radius);
+      min-height:220px;background:
+        linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      display:grid;place-items:center;color:var(--muted)
+    }
+
+    .footer{margin-top:24px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr}
+      h1{font-size:38px}
+      .info-row{grid-template-columns:1fr}
+      .grid-3,.grid-2,.gallery{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="#inicio">
+        <div class="mark">LR</div>
+        <div>
+          <strong>Restaurante Lumbre</strong>
+          <small>Demo elegante para negocios gastronómicos</small>
+        </div>
+      </a>
+      <nav class="nav">
+        <a class="pill" href="#carta">Carta</a>
+        <a class="pill" href="#ambiente">Ambiente</a>
+        <a class="pill" href="#ubicacion">Ubicación</a>
+        <a class="pill" href="#reserva">Reservar</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+      <div>
+        <div class="tag">Demo restaurante</div>
+        <h1>Sabores mediterráneos con un toque actual</h1>
+        <p class="lead">
+          Cocina de temporada, producto local y un ambiente cálido para celebraciones, cenas y eventos.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#reserva">Reservar mesa</a>
+          <a class="btn" href="#carta">Ver carta</a>
+        </div>
+        <div class="info-row">
+          <div class="info">
+            <b>Horario</b>
+            <small>Lun a Dom · 13:00 - 16:00 / 20:00 - 23:30</small>
+          </div>
+          <div class="info">
+            <b>Ubicación</b>
+            <small>Centro histórico · Mesa en terraza</small>
+          </div>
+          <div class="info">
+            <b>Reservas</b>
+            <small>Tel. +34 910 000 000</small>
+          </div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="photo">
+          <div>
+            <b>Menú degustación</b>
+            <div class="tag" style="margin-top:8px">Nuevo esta semana</div>
+          </div>
+          <span>Platos de autor</span>
+        </div>
+        <div class="card">
+          <h3>Reserva rápida</h3>
+          <p class="lead" style="margin:0">Confirmación en minutos y opción de menú para grupos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="carta">
+      <div class="title-row">
+        <h2>Carta destacada</h2>
+        <span>Selección de platos más pedidos</span>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Entrantes</h3>
+          <div class="menu-item"><span>Ensalada de burrata</span><span>12€</span></div>
+          <div class="menu-item"><span>Tartar de atún rojo</span><span>16€</span></div>
+          <div class="menu-item"><span>Verduras a la brasa</span><span>10€</span></div>
+        </div>
+        <div class="card">
+          <h3>Principales</h3>
+          <div class="menu-item"><span>Arroz meloso de marisco</span><span>18€</span></div>
+          <div class="menu-item"><span>Solomillo con reducción</span><span>22€</span></div>
+          <div class="menu-item"><span>Corvina al horno</span><span>19€</span></div>
+        </div>
+        <div class="card">
+          <h3>Postres</h3>
+          <div class="menu-item"><span>Tarta de queso</span><span>7€</span></div>
+          <div class="menu-item"><span>Chocolate 70%</span><span>8€</span></div>
+          <div class="menu-item"><span>Helado artesanal</span><span>6€</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ambiente">
+      <div class="title-row">
+        <h2>Ambiente y estilo</h2>
+        <span>Espacio cálido, elegante y fotogénico</span>
+      </div>
+      <div class="gallery">
+        <div class="shot"><b>Terraza</b><span>Atardecer</span></div>
+        <div class="shot"><b>Salón</b><span>Iluminación cálida</span></div>
+        <div class="shot"><b>Cocina</b><span>Show cooking</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="ubicacion">
+      <div class="title-row">
+        <h2>Ubicación</h2>
+        <span>Fácil acceso y aparcamiento cercano</span>
+      </div>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Dirección</h3>
+          <p class="lead" style="margin:0">Calle Mayor 123 · Madrid</p>
+          <p class="lead" style="margin:8px 0 0">Reservas: +34 910 000 000</p>
+          <p class="lead" style="margin:8px 0 0">Eventos privados y grupos con menú cerrado.</p>
+        </div>
+        <div class="map">Mapa demo</div>
+      </div>
+    </section>
+
+    <section class="section" id="reserva">
+      <div class="card" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
+        <div>
+          <h3 style="margin:0 0 6px">¿Celebras algo especial?</h3>
+          <p class="lead" style="margin:0">Te ayudamos a organizar cenas de empresa, cumpleaños y eventos.</p>
+        </div>
+        <a class="btn btn-primary" href="tel:+34910000000">Llamar ahora</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="y"></span> Restaurante Lumbre · Demo</div>
+      <div>Horario continuo · Cocina mediterránea · Reservas por teléfono</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
