@@ -1,1 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Webs sencillas para negocios | iM1GU1</title>
+  <meta name="description" content="Creo webs sencillas para negocios locales: WhatsApp, mapa, fotos y servicios. Rápido y sin líos." />
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;line-height:1.5;color:#111}
+    .wrap{max-width:900px;margin:0 auto;padding:32px 18px}
+    .card{border:1px solid #e7e7e7;border-radius:16px;padding:18px;margin:14px 0}
+    h1{font-size:34px;margin:0 0 10px}
+    h2{font-size:20px;margin:0 0 8px}
+    .muted{color:#555}
+    .btn{display:inline-block;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700;margin-right:10px}
+    .btn-primary{background:#111;color:#fff}
+    .btn-ghost{border:1px solid #111;color:#111}
+    ul{margin:8px 0 0 18px}
+    .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    footer{margin-top:26px;color:#666;font-size:14px}
+    .tag{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:6px 10px;margin:6px 6px 0 0;font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="muted">iM1GU1 · Desarrollo web</p>
+    <h1>Webs sencillas para negocios locales</h1>
+    <p class="muted">Una web clara, rápida y lista para móvil, para que te encuentren y te contacten por WhatsApp.</p>
 
+    <a class="btn btn-primary" href="https://wa.me/34633936388">Escríbeme por WhatsApp</a>
+    <a class="btn btn-ghost" href="#precios">Ver precios</a>
+
+    <div class="card">
+      <h2>Qué incluye</h2>
+      <div class="grid">
+        <div>
+          <span class="tag">📱 Adaptada a móvil</span>
+          <span class="tag">🟢 Botón WhatsApp</span>
+          <span class="tag">📍 Mapa</span>
+          <span class="tag">🖼️ Fotos + info</span>
+        </div>
+        <div>
+          <p class="muted" style="margin:0">
+            Ideal para bares, peluquerías, talleres, clínicas, tiendas…  
+            Sin complicaciones ni “cosas raras”.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="precios">
+      <h2>Precios</h2>
+      <p style="margin:0"><strong>Web 1 página:</strong> desde <strong>450€</strong></p>
+      <p class="muted" style="margin:6px 0 0">Incluye diseño sencillo, subida online y versión móvil.</p>
+      <p style="margin:10px 0 0"><strong>Mantenimiento opcional:</strong> 30€/mes (cambios pequeños, soporte básico)</p>
+    </div>
+
+    <div class="card">
+      <h2>Cómo trabajamos</h2>
+      <ol style="margin:8px 0 0 18px">
+        <li>Me dices qué negocio es y qué quieres mostrar</li>
+        <li>Me pasas texto/fotos (o te ayudo a prepararlo)</li>
+        <li>Te enseño un borrador y lo ajustamos</li>
+        <li>Publicamos y listo</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Contacto</h2>
+      <p class="muted">WhatsApp es lo más rápido.</p>
+      <p style="margin:0">
+        <a href="https://wa.me/34633936388">https://wa.me/34633936388</a>
+      </p>
+    </div>
+
+    <footer>
+      © <span id="y"></span> iM1GU1 · Hecho con ayuda de IA + revisión humana
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
