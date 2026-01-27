@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Demo Restaurante | Lumbre</title>
-  <meta name="description" content="Demo de restaurante con carta, reservas y ubicación. Diseño cálido y elegante para negocios gastronómicos." />
-  <meta name="theme-color" content="#17110f" />
+  <title>Demo Restaurante | Plan B</title>
+  <meta name="description" content="Demo de restaurante con portada y secciones: carta, reservas y contacto." />
+  <meta name="theme-color" content="#1b1411" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,220 +13,196 @@
 
   <style>
     :root{
-      --bg:#17110f;
-      --bg-2:#1f1714;
-      --surface:#241b18;
-      --surface-2:#2c201c;
-      --text:#f8f1ea;
-      --muted:#d4c8be;
-      --line:rgba(255,255,255,.08);
-      --accent:#e0a458;
-      --accent-2:#c77d48;
+      --bg:#1b1411;
+      --text:#f6f1ed;
+      --muted:#d7c9be;
+      --line:rgba(255,255,255,.16);
+      --accent:#f2d6b3;
+      --accent-2:#e7b772;
+      --shadow:0 24px 60px rgba(0,0,0,.45);
       --radius:18px;
-      --shadow:0 22px 60px rgba(0,0,0,.45);
     }
 
     *{box-sizing:border-box}
     html,body{margin:0}
     body{
       font-family:"Source Sans 3", sans-serif;
-      background:
-        radial-gradient(900px 500px at 10% -10%, rgba(224,164,88,.18), transparent 60%),
-        radial-gradient(800px 600px at 90% 0%, rgba(199,125,72,.16), transparent 55%),
-        var(--bg);
+      background:var(--bg);
       color:var(--text);
       line-height:1.6;
     }
-
     a{color:inherit}
-    .wrap{max-width:1120px;margin:0 auto;padding:32px 18px 90px}
-
-    .top{
-      display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:18px
-    }
-    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-    .mark{
-      width:44px;height:44px;border-radius:14px;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));
-      display:grid;place-items:center;font-weight:700;color:#2c1a12
-    }
-    .brand strong{font-family:"Playfair Display", serif;font-size:18px}
-    .brand small{display:block;color:var(--muted);margin-top:2px}
-    .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-    .pill{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      padding:9px 12px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:600
-    }
-    .pill:hover{background:rgba(255,255,255,.08)}
 
     .hero{
-      display:grid;grid-template-columns:1.1fr .9fr;gap:18px;
-      padding:24px;border:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border-radius:calc(var(--radius) + 6px);
-      box-shadow:var(--shadow);
+      min-height:100vh;
+      display:flex;align-items:center;justify-content:center;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.55)),
+        url("assets/hero.jpg");
+      background-size:cover;
+      background-position:center;
+      position:relative;
+      text-align:center;
+      padding:90px 18px 120px;
     }
-    .tag{
-      display:inline-flex;align-items:center;gap:8px;
-      font-size:12px;color:var(--muted);
-      border:1px solid var(--line);
-      padding:6px 10px;border-radius:999px;background:rgba(0,0,0,.18)
+
+    .logo{
+      display:inline-block;
+      border:2px solid rgba(255,255,255,.8);
+      padding:8px 14px;
+      font-family:"Playfair Display", serif;
+      letter-spacing:.15em;
+      font-size:20px;
+      background:rgba(255,255,255,.06);
+      backdrop-filter:blur(4px);
+    }
+    .subtitle{
+      margin-top:10px;
+      font-size:12px;
+      letter-spacing:.35em;
+      text-transform:uppercase;
+      color:var(--muted);
     }
     h1{
       font-family:"Playfair Display", serif;
-      font-size:44px;line-height:1.05;margin:14px 0 10px
+      font-size:46px;line-height:1.1;
+      margin:18px 0 8px;
+      text-shadow:0 8px 20px rgba(0,0,0,.35);
     }
-    .lead{color:var(--muted);margin:0 0 16px;max-width:58ch}
-    .cta{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 10px}
+    .lead{
+      color:var(--muted);
+      max-width:62ch;
+      margin:0 auto 18px;
+    }
+    .divider{
+      width:220px;height:1px;background:rgba(255,255,255,.35);
+      margin:16px auto 12px;
+      position:relative;
+    }
+    .divider:after{
+      content:"";position:absolute;left:50%;top:-2px;transform:translateX(-50%);
+      width:6px;height:6px;border-radius:999px;background:rgba(255,255,255,.7);
+    }
     .btn{
       display:inline-flex;align-items:center;gap:10px;
-      padding:12px 14px;border-radius:14px;border:1px solid var(--line);
-      text-decoration:none;font-weight:700;background:rgba(255,255,255,.05)
+      padding:12px 16px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.35);
+      text-decoration:none;font-weight:700;
+      background:rgba(255,255,255,.06);
+      box-shadow:var(--shadow);
     }
-    .btn:hover{background:rgba(255,255,255,.08)}
-    .btn-primary{
-      color:#2c1a12;border:none;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));
-      box-shadow:0 18px 50px rgba(224,164,88,.2)
-    }
-    .hero-card{
-      display:flex;flex-direction:column;gap:12px;justify-content:center
-    }
-    .photo{
-      border-radius:var(--radius);
-      background:linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
-      min-height:220px;border:1px solid var(--line);
-      display:flex;align-items:flex-end;justify-content:space-between;
-      padding:16px
-    }
-    .photo span{font-size:12px;color:var(--muted)}
-    .info-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:10px}
-    .info{
-      border:1px solid var(--line);background:rgba(0,0,0,.18);
-      border-radius:var(--radius);padding:12px
-    }
-    .info b{display:block}
-    .info small{color:var(--muted)}
+    .btn:hover{background:rgba(255,255,255,.12)}
 
-    .section{margin-top:28px}
-    .title-row{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:12px}
-    .title-row h2{margin:0;font-size:22px}
-    .title-row span{color:var(--muted);font-size:14px}
+    .icon-nav{
+      position:absolute;left:0;right:0;bottom:28px;
+      display:flex;justify-content:center;gap:22px;flex-wrap:wrap;
+      padding:0 18px;
+    }
+    .icon-link{
+      display:flex;flex-direction:column;align-items:center;gap:6px;
+      text-decoration:none;color:var(--text);font-size:12px;
+    }
+    .icon-circle{
+      width:48px;height:48px;border-radius:50%;
+      display:grid;place-items:center;
+      border:1px solid rgba(255,255,255,.35);
+      background:rgba(0,0,0,.35);
+      backdrop-filter:blur(6px);
+    }
+    .icon-circle svg{width:22px;height:22px;fill:#fff}
 
+    .wrap{max-width:1100px;margin:0 auto;padding:60px 18px 90px}
+    .section{margin-top:40px}
+    .title{
+      font-family:"Playfair Display", serif;
+      font-size:26px;margin:0 0 12px;
+    }
     .grid{display:grid;gap:12px}
     .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
     .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-
     .card{
-      border:1px solid var(--line);background:rgba(255,255,255,.04);
-      border-radius:var(--radius);padding:16px
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      border-radius:var(--radius);
+      padding:16px;
     }
-    .card h3{margin:0 0 8px;font-size:16px}
+    .card h3{margin:0 0 8px}
+    .muted{color:var(--muted)}
     .menu-item{display:flex;justify-content:space-between;gap:10px;color:var(--muted);margin:6px 0}
 
-    .gallery{
-      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px
-    }
-    .gallery .shot{
-      min-height:160px;border-radius:var(--radius);
-      border:1px solid var(--line);
-      background:linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
-      display:flex;align-items:flex-end;justify-content:space-between;padding:14px
-    }
+    .footer{margin-top:40px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
-    .map{
-      border:1px solid var(--line);border-radius:var(--radius);
-      min-height:220px;background:
-        linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
-      display:grid;place-items:center;color:var(--muted)
-    }
-
-    .footer{margin-top:24px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-
-    @media (max-width: 980px){
-      .hero{grid-template-columns:1fr}
+    @media (max-width: 900px){
       h1{font-size:38px}
-      .info-row{grid-template-columns:1fr}
-      .grid-3,.grid-2,.gallery{grid-template-columns:1fr}
+      .grid-3,.grid-2{grid-template-columns:1fr}
+    }
+    @media (max-width: 600px){
+      .icon-nav{bottom:16px;gap:14px}
+      .icon-circle{width:44px;height:44px}
+      .hero{padding-bottom:140px}
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="top">
-      <a class="brand" href="#inicio">
-        <div class="mark">LR</div>
-        <div>
-          <strong>Restaurante Lumbre</strong>
-          <small>Demo elegante para negocios gastronómicos</small>
-        </div>
-      </a>
-      <nav class="nav">
-        <a class="pill" href="#carta">Carta</a>
-        <a class="pill" href="#ambiente">Ambiente</a>
-        <a class="pill" href="#ubicacion">Ubicación</a>
-        <a class="pill" href="#reserva">Reservar</a>
-      </nav>
-    </header>
+  <section class="hero" id="inicio">
+    <div>
+      <div class="logo">Plan B</div>
+      <div class="subtitle">Alternativa gastronomica</div>
 
-    <section class="hero" id="inicio">
-      <div>
-        <div class="tag">Demo restaurante</div>
-        <h1>Sabores mediterráneos con un toque actual</h1>
-        <p class="lead">
-          Cocina de temporada, producto local y un ambiente cálido para celebraciones, cenas y eventos.
-        </p>
-        <div class="cta">
-          <a class="btn btn-primary" href="#reserva">Reservar mesa</a>
-          <a class="btn" href="#carta">Ver carta</a>
-        </div>
-        <div class="info-row">
-          <div class="info">
-            <b>Horario</b>
-            <small>Lun a Dom · 13:00 - 16:00 / 20:00 - 23:30</small>
-          </div>
-          <div class="info">
-            <b>Ubicación</b>
-            <small>Centro histórico · Mesa en terraza</small>
-          </div>
-          <div class="info">
-            <b>Reservas</b>
-            <small>Tel. +34 910 000 000</small>
-          </div>
-        </div>
-      </div>
-      <div class="hero-card">
-        <div class="photo">
-          <div>
-            <b>Menú degustación</b>
-            <div class="tag" style="margin-top:8px">Nuevo esta semana</div>
-          </div>
-          <span>Platos de autor</span>
-        </div>
-        <div class="card">
-          <h3>Reserva rápida</h3>
-          <p class="lead" style="margin:0">Confirmación en minutos y opción de menú para grupos.</p>
-        </div>
-      </div>
+      <h1>Un restaurante para ser descubierto</h1>
+      <div class="divider"></div>
+      <p class="lead">Alternativa gastronomica en pleno centro de Castellon.</p>
+
+      <a class="btn" href="#restaurante">Descubre nuestro restaurante</a>
+    </div>
+
+    <nav class="icon-nav" aria-label="Accesos rapidos">
+      <a class="icon-link" href="#restaurante">
+        <span class="icon-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 5h14v2H5V5zm0 4h14v2H5V9zm0 4h10v2H5v-2z"/></svg>
+        </span>
+        <span>El Plan B</span>
+      </a>
+      <a class="icon-link" href="#carta">
+        <span class="icon-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M7 2h2v20H7V2zm8 0h2v20h-2V2zM11 2h2v7h-2V2z"/></svg>
+        </span>
+        <span>Nuestra carta</span>
+      </a>
+      <a class="icon-link" href="#reserva">
+        <span class="icon-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M7 2h2v3h6V2h2v3h3v17H4V5h3V2zm13 7H4v11h16V9z"/></svg>
+        </span>
+        <span>Reservar</span>
+      </a>
+      <a class="icon-link" href="#contacto">
+        <span class="icon-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 4.6 5.5 11.2 6.6 12.6.2.2.6.2.8 0C13.5 20.2 19 13.6 19 9c0-3.9-3.1-7-7-7zm0 10.2c-1.8 0-3.2-1.4-3.2-3.2S10.2 5.8 12 5.8s3.2 1.4 3.2 3.2S13.8 12.2 12 12.2z"/></svg>
+        </span>
+        <span>Contacto</span>
+      </a>
+    </nav>
+  </section>
+
+  <div class="wrap">
+    <section class="section" id="restaurante">
+      <h2 class="title">El Plan B</h2>
+      <p class="muted">Cocina honesta, ambiente calido y un espacio pensado para disfrutar sin prisa.</p>
     </section>
 
     <section class="section" id="carta">
-      <div class="title-row">
-        <h2>Carta destacada</h2>
-        <span>Selección de platos más pedidos</span>
-      </div>
+      <h2 class="title">Nuestra carta</h2>
       <div class="grid grid-3">
         <div class="card">
           <h3>Entrantes</h3>
           <div class="menu-item"><span>Ensalada de burrata</span><span>12€</span></div>
-          <div class="menu-item"><span>Tartar de atún rojo</span><span>16€</span></div>
+          <div class="menu-item"><span>Tartar de atun rojo</span><span>16€</span></div>
           <div class="menu-item"><span>Verduras a la brasa</span><span>10€</span></div>
         </div>
         <div class="card">
           <h3>Principales</h3>
           <div class="menu-item"><span>Arroz meloso de marisco</span><span>18€</span></div>
-          <div class="menu-item"><span>Solomillo con reducción</span><span>22€</span></div>
+          <div class="menu-item"><span>Solomillo con reduccion</span><span>22€</span></div>
           <div class="menu-item"><span>Corvina al horno</span><span>19€</span></div>
         </div>
         <div class="card">
@@ -238,47 +214,35 @@
       </div>
     </section>
 
-    <section class="section" id="ambiente">
-      <div class="title-row">
-        <h2>Ambiente y estilo</h2>
-        <span>Espacio cálido, elegante y fotogénico</span>
-      </div>
-      <div class="gallery">
-        <div class="shot"><b>Terraza</b><span>Atardecer</span></div>
-        <div class="shot"><b>Salón</b><span>Iluminación cálida</span></div>
-        <div class="shot"><b>Cocina</b><span>Show cooking</span></div>
-      </div>
-    </section>
-
-    <section class="section" id="ubicacion">
-      <div class="title-row">
-        <h2>Ubicación</h2>
-        <span>Fácil acceso y aparcamiento cercano</span>
-      </div>
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>Dirección</h3>
-          <p class="lead" style="margin:0">Calle Mayor 123 · Madrid</p>
-          <p class="lead" style="margin:8px 0 0">Reservas: +34 910 000 000</p>
-          <p class="lead" style="margin:8px 0 0">Eventos privados y grupos con menú cerrado.</p>
-        </div>
-        <div class="map">Mapa demo</div>
-      </div>
-    </section>
-
     <section class="section" id="reserva">
+      <h2 class="title">Reservas</h2>
       <div class="card" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
         <div>
-          <h3 style="margin:0 0 6px">¿Celebras algo especial?</h3>
-          <p class="lead" style="margin:0">Te ayudamos a organizar cenas de empresa, cumpleaños y eventos.</p>
+          <h3 style="margin:0 0 6px">Reserva tu mesa</h3>
+          <p class="muted" style="margin:0">Te confirmamos en minutos.</p>
         </div>
-        <a class="btn btn-primary" href="tel:+34910000000">Llamar ahora</a>
+        <a class="btn" href="tel:+34910000000">Llamar ahora</a>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <h2 class="title">Contacto</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Direccion</h3>
+          <p class="muted" style="margin:0">Calle Mayor 123 · Castellon</p>
+          <p class="muted" style="margin:8px 0 0">Tel. +34 910 000 000</p>
+        </div>
+        <div class="card">
+          <h3>Horario</h3>
+          <p class="muted" style="margin:0">Lun a Dom · 13:00 - 16:00 / 20:00 - 23:30</p>
+        </div>
       </div>
     </section>
 
     <footer class="footer">
-      <div>© <span id="y"></span> Restaurante Lumbre · Demo</div>
-      <div>Horario continuo · Cocina mediterránea · Reservas por teléfono</div>
+      <div>© <span id="y"></span> Plan B · Demo</div>
+      <div>Alternativa gastronomica · Castellon</div>
     </footer>
   </div>
 
