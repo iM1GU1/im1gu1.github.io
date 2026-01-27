@@ -3,79 +3,427 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Webs sencillas para negocios | iM1GU1</title>
-  <meta name="description" content="Creo webs sencillas para negocios locales: WhatsApp, mapa, fotos y servicios. Rápido y sin líos." />
+  <title>Webs bonitas y efectivas para negocios | iM1GU1</title>
+  <meta name="description" content="Creo webs modernas para negocios locales: rápidas, móviles, WhatsApp y Google. Diseño limpio y profesional." />
+
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;line-height:1.5;color:#111}
-    .wrap{max-width:900px;margin:0 auto;padding:32px 18px}
-    .card{border:1px solid #e7e7e7;border-radius:16px;padding:18px;margin:14px 0}
-    h1{font-size:34px;margin:0 0 10px}
-    h2{font-size:20px;margin:0 0 8px}
-    .muted{color:#555}
-    .btn{display:inline-block;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700;margin-right:10px}
-    .btn-primary{background:#111;color:#fff}
-    .btn-ghost{border:1px solid #111;color:#111}
-    ul{margin:8px 0 0 18px}
-    .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-    footer{margin-top:26px;color:#666;font-size:14px}
-    .tag{display:inline-block;border:1px solid #ddd;border-radius:999px;padding:6px 10px;margin:6px 6px 0 0;font-size:13px}
+    :root{
+      --bg: #0b1220;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --line: rgba(255,255,255,.12);
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --r: 18px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 700px at 20% -10%, rgba(83, 158, 255,.22), transparent 60%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(162, 78, 255,.18), transparent 55%),
+                  radial-gradient(1000px 700px at 50% 120%, rgba(0, 255, 204,.10), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 80px}
+
+    /* Top bar */
+    .top{
+      display:flex;justify-content:space-between;align-items:center;
+      gap:14px;margin-bottom:18px
+    }
+    .brand{
+      display:flex;align-items:center;gap:10px;
+      text-decoration:none
+    }
+    .logo{
+      width:42px;height:42px;border-radius:14px;
+      background: linear-gradient(135deg, rgba(83,158,255,.95), rgba(162,78,255,.95));
+      box-shadow: 0 16px 40px rgba(0,0,0,.35);
+      display:grid;place-items:center;font-weight:900;
+      letter-spacing:.6px
+    }
+    .brand small{display:block;color:var(--muted);margin-top:1px}
+    .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .pill{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding:10px 12px;border-radius:999px;
+      text-decoration:none;font-weight:650;font-size:14px
+    }
+    .pill:hover{background: rgba(255,255,255,.07)}
+
+    /* Hero */
+    .hero{
+      display:grid;grid-template-columns: 1.2fr .8fr;gap:16px;
+      padding:22px;border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border-radius: calc(var(--r) + 6px);
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero:before{
+      content:"";
+      position:absolute;inset:-2px;
+      background: radial-gradient(600px 240px at 20% 10%, rgba(83,158,255,.20), transparent 60%),
+                  radial-gradient(520px 260px at 70% 0%, rgba(162,78,255,.18), transparent 60%);
+      pointer-events:none;
+      filter: blur(0px);
+    }
+    .hero > *{position:relative}
+    .kicker{
+      display:inline-flex;gap:8px;align-items:center;
+      font-weight:700;font-size:13px;color:var(--muted);
+      border:1px solid var(--line);
+      padding:8px 12px;border-radius:999px;background: rgba(0,0,0,.15)
+    }
+    h1{font-size:42px;line-height:1.1;margin:14px 0 10px}
+    .lead{color:var(--muted);font-size:16px;max-width:60ch;margin:0 0 16px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:12px 14px;border-radius:14px;
+      border:1px solid var(--line);
+      text-decoration:none;font-weight:800;
+      background: rgba(255,255,255,.06);
+    }
+    .btn:hover{background: rgba(255,255,255,.09)}
+    .btn-primary{
+      border:none;
+      background: linear-gradient(135deg, rgba(83,158,255,1), rgba(162,78,255,1));
+      box-shadow: 0 18px 50px rgba(83,158,255,.14);
+    }
+    .btn-primary:hover{filter: brightness(1.05)}
+    .hero-right{
+      display:flex;flex-direction:column;gap:12px;justify-content:center
+    }
+    .mini{
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      border-radius: var(--r);
+      padding:14px;
+    }
+    .mini b{display:block;margin-bottom:6px}
+    .mini p{margin:0;color:var(--muted);font-size:14px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .tag{
+      font-size:12px;color:var(--muted);
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding:7px 10px;border-radius:999px
+    }
+
+    /* Sections */
+    .section{margin-top:18px}
+    .grid{display:grid;gap:12px}
+    .grid-3{grid-template-columns: repeat(3, minmax(0,1fr))}
+    .grid-2{grid-template-columns: repeat(2, minmax(0,1fr))}
+    @media (max-width: 940px){
+      .hero{grid-template-columns:1fr}
+      h1{font-size:36px}
+    }
+    @media (max-width: 760px){
+      .grid-3,.grid-2{grid-template-columns:1fr}
+    }
+
+    .card{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      border-radius: var(--r);
+      padding:16px;
+    }
+    .card:hover{background: rgba(255,255,255,.07)}
+    .card h2{margin:0 0 6px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    .title-row{
+      display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;
+      margin:20px 0 10px
+    }
+    .title-row h3{margin:0;font-size:18px}
+    .title-row span{color:var(--muted);font-size:14px}
+
+    /* Pricing */
+    .price{
+      padding:18px;
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+    }
+    .price .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:12px;color:var(--muted);
+      border:1px solid var(--line);
+      padding:7px 10px;border-radius:999px;background: rgba(0,0,0,.15);
+      margin-bottom:10px
+    }
+    .amount{font-size:30px;font-weight:900;margin:4px 0 10px}
+    .price ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+    .price li{margin:6px 0}
+    .price .buy{margin-top:14px}
+
+    /* FAQ */
+    details{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius: var(--r);
+      padding:12px 14px;
+    }
+    summary{cursor:pointer;font-weight:800}
+    details p{color:var(--muted);margin:10px 0 0;font-size:14px}
+
+    /* Floating CTA */
+    .floating{
+      position:fixed;left:0;right:0;bottom:14px;
+      display:flex;justify-content:center;pointer-events:none;
+      padding:0 12px;z-index:50
+    }
+    .floating .bar{
+      pointer-events:auto;
+      max-width:1100px;width:100%;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.35);
+      backdrop-filter: blur(10px);
+      border-radius: 999px;
+      padding:10px 12px;
+      display:flex;gap:10px;align-items:center;justify-content:space-between;
+      box-shadow: 0 25px 70px rgba(0,0,0,.45);
+    }
+    .floating .bar small{color:var(--muted)}
+    .footer{
+      margin-top:22px;color:var(--muted);font-size:13px;
+      display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
-    <p class="muted">iM1GU1 · Desarrollo web</p>
-    <h1>Webs sencillas para negocios locales</h1>
-    <p class="muted">Una web clara, rápida y lista para móvil, para que te encuentren y te contacten por WhatsApp.</p>
-
-    <a class="btn btn-primary" href="https://wa.me/34633936388">Escríbeme por WhatsApp</a>
-    <a class="btn btn-ghost" href="#precios">Ver precios</a>
-
-    <div class="card">
-      <h2>Qué incluye</h2>
-      <div class="grid">
+    <!-- Top -->
+    <div class="top">
+      <a class="brand" href="#">
+        <div class="logo">iM</div>
         <div>
-          <span class="tag">📱 Adaptada a móvil</span>
-          <span class="tag">🟢 Botón WhatsApp</span>
-          <span class="tag">📍 Mapa</span>
-          <span class="tag">🖼️ Fotos + info</span>
+          <div style="font-weight:900">iM1GU1</div>
+          <small>Webs para negocios · rápido y sin líos</small>
         </div>
-        <div>
-          <p class="muted" style="margin:0">
-            Ideal para bares, peluquerías, talleres, clínicas, tiendas…  
-            Sin complicaciones ni “cosas raras”.
-          </p>
+      </a>
+
+      <div class="nav">
+        <a class="pill" href="#servicio">Servicio</a>
+        <a class="pill" href="#precios">Precios</a>
+        <a class="pill" href="#faq">Dudas</a>
+        <a class="pill" href="https://wa.me/34633936388">WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div>
+        <div class="kicker">✨ Diseño moderno · 📱 móvil · 🟢 WhatsApp · 📍 Google</div>
+        <h1>Haz que tu negocio se vea <span style="opacity:.92">premium</span> en internet</h1>
+        <p class="lead">
+          Creo webs limpias y profesionales para negocios locales. Enfocadas en una cosa:
+          que te encuentren, confíen en ti y te contacten.
+        </p>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="https://wa.me/34633936388">🟢 Pedir web por WhatsApp</a>
+          <a class="btn" href="#precios">Ver precios</a>
+          <a class="btn" href="#servicio">Qué incluye</a>
+        </div>
+
+        <div class="tags">
+          <span class="tag">⏱️ Entrega rápida</span>
+          <span class="tag">✅ Adaptada a móvil</span>
+          <span class="tag">🔎 Preparada para Google</span>
+          <span class="tag">🧩 Fácil de actualizar</span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="mini">
+          <b>Ideal para</b>
+          <p>Bares · restaurantes · peluquerías · talleres · clínicas · tiendas</p>
+        </div>
+        <div class="mini">
+          <b>Tu cliente hace clic y…</b>
+          <p>📞 te llama · 🟢 WhatsApp · 📍 llega con el mapa · 🕒 ve horarios · 🧾 ve servicios</p>
+        </div>
+        <div class="mini">
+          <b>Mi promesa</b>
+          <p>Sin complicaciones. Te lo dejo listo y bonito. Tú solo me pasas lo básico.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service -->
+    <div class="section" id="servicio">
+      <div class="title-row">
+        <h3>Qué incluye</h3>
+        <span>Una web que se entiende en 10 segundos</span>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <h2>📱 Diseño móvil primero</h2>
+          <p>Se ve perfecto en móvil, que es donde entra casi todo el mundo.</p>
+        </div>
+        <div class="card">
+          <h2>🟢 WhatsApp a un clic</h2>
+          <p>Botón visible para que te escriban sin pensarlo.</p>
+        </div>
+        <div class="card">
+          <h2>📍 Mapa + datos claros</h2>
+          <p>Ubicación, horarios y contacto, sin perderse.</p>
+        </div>
+        <div class="card">
+          <h2>🖼️ Fotos + servicios</h2>
+          <p>Galería sencilla y secciones con lo importante.</p>
+        </div>
+        <div class="card">
+          <h2>⚡ Carga rápida</h2>
+          <p>Web ligera. Nada de cosas que tardan siglos.</p>
+        </div>
+        <div class="card">
+          <h2>🔎 Preparada para Google</h2>
+          <p>Estructura correcta y base para posicionar tu negocio.</p>
         </div>
       </div>
     </div>
 
-    <div class="card" id="precios">
-      <h2>Precios</h2>
-      <p style="margin:0"><strong>Web 1 página:</strong> desde <strong>450€</strong></p>
-      <p class="muted" style="margin:6px 0 0">Incluye diseño sencillo, subida online y versión móvil.</p>
-      <p style="margin:10px 0 0"><strong>Mantenimiento opcional:</strong> 30€/mes (cambios pequeños, soporte básico)</p>
+    <!-- Pricing -->
+    <div class="section" id="precios">
+      <div class="title-row">
+        <h3>Precios claros</h3>
+        <span>Sin sorpresas</span>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card price">
+          <div class="badge">🚀 Recomendado para empezar</div>
+          <div style="font-weight:900;font-size:16px">One-Page Pro</div>
+          <div class="amount">450€</div>
+          <ul>
+            <li>1 página (todo en una)</li>
+            <li>WhatsApp + mapa + horarios</li>
+            <li>Sección servicios / menú</li>
+            <li>Adaptada a móvil</li>
+          </ul>
+          <div class="buy">
+            <a class="btn btn-primary" href="https://wa.me/34633936388">Pedir presupuesto</a>
+          </div>
+        </div>
+
+        <div class="card price">
+          <div class="badge">✨ Más completa</div>
+          <div style="font-weight:900;font-size:16px">Web Negocio</div>
+          <div class="amount">790€</div>
+          <ul>
+            <li>Hasta 4 secciones/páginas</li>
+            <li>Servicios + galería</li>
+            <li>Contacto completo</li>
+            <li>Optimización básica</li>
+          </ul>
+          <div class="buy">
+            <a class="btn btn-primary" href="https://wa.me/34633936388">Pedir presupuesto</a>
+          </div>
+        </div>
+
+        <div class="card price">
+          <div class="badge">🧩 Con extras</div>
+          <div style="font-weight:900;font-size:16px">Web + Extras</div>
+          <div class="amount">desde 1.190€</div>
+          <ul>
+            <li>Más secciones y contenido</li>
+            <li>Blog / catálogo simple</li>
+            <li>Integraciones (según caso)</li>
+            <li>Soporte extra</li>
+          </ul>
+          <div class="buy">
+            <a class="btn btn-primary" href="https://wa.me/34633936388">Pedir presupuesto</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-2" style="margin-top:12px">
+        <div class="card">
+          <h2>🛠️ Mantenimiento (opcional)</h2>
+          <p><b>30€/mes</b> · cambios pequeños, soporte básico y tranquilidad.</p>
+        </div>
+        <div class="card">
+          <h2>📌 Importante</h2>
+          <p>Los precios pueden variar si necesitas texto/fotos desde cero o funciones extra.</p>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>Cómo trabajamos</h2>
-      <ol style="margin:8px 0 0 18px">
-        <li>Me dices qué negocio es y qué quieres mostrar</li>
-        <li>Me pasas texto/fotos (o te ayudo a prepararlo)</li>
-        <li>Te enseño un borrador y lo ajustamos</li>
-        <li>Publicamos y listo</li>
-      </ol>
+    <!-- Mini portfolio / proof -->
+    <div class="section" id="ejemplos">
+      <div class="title-row">
+        <h3>Ejemplos / estilo</h3>
+        <span>Si aún no tienes portfolio, lo montamos con 2 demos</span>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h2>🍔 Demo bar/restaurante</h2>
+          <p>Página con menú, fotos, reservas por WhatsApp y mapa.</p>
+        </div>
+        <div class="card">
+          <h2>💈 Demo peluquería</h2>
+          <p>Servicios, precios, testimonios y contacto rápido.</p>
+        </div>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>Contacto</h2>
-      <p class="muted">WhatsApp es lo más rápido.</p>
-      <p style="margin:0">
-        <a href="https://wa.me/34633936388">https://wa.me/34633936388</a>
-      </p>
+    <!-- FAQ -->
+    <div class="section" id="faq">
+      <div class="title-row">
+        <h3>Dudas típicas</h3>
+        <span>Respuestas claras</span>
+      </div>
+
+      <div class="grid">
+        <details>
+          <summary>¿Cuánto tardas?</summary>
+          <p>Normalmente pocos días para una one-page, dependiendo de si ya tienes fotos y textos.</p>
+        </details>
+        <details>
+          <summary>¿Qué necesitas de mí?</summary>
+          <p>Nombre del negocio, horarios, servicios/menú, dirección y algunas fotos. Si no tienes, te guío.</p>
+        </details>
+        <details>
+          <summary>¿Puedo pedir cambios?</summary>
+          <p>Sí. Ajustamos un borrador y dejamos la web como te guste, sin complicarlo.</p>
+        </details>
+        <details>
+          <summary>¿Incluye dominio .com?</summary>
+          <p>Podemos empezar gratis con hosting sencillo. Si quieres dominio propio, te recomiendo uno y lo configuramos.</p>
+        </details>
+      </div>
     </div>
 
-    <footer>
-      © <span id="y"></span> iM1GU1 · Hecho con ayuda de IA + revisión humana
-    </footer>
+    <div class="footer">
+      <div>© <span id="y"></span> iM1GU1</div>
+      <div style="opacity:.9">Contacto: <a href="https://wa.me/34633936388">WhatsApp</a> · GitHub: <a href="https://github.com/iM1GU1">iM1GU1</a></div>
+    </div>
+  </div>
+
+  <!-- Floating CTA -->
+  <div class="floating">
+    <div class="bar">
+      <div>
+        <div style="font-weight:900">¿Quieres una web así para tu negocio?</div>
+        <small>Te respondo por WhatsApp y te digo precio sin compromiso</small>
+      </div>
+      <a class="btn btn-primary" href="https://wa.me/34633936388">🟢 WhatsApp</a>
+    </div>
   </div>
 
   <script>
