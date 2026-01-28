@@ -137,13 +137,29 @@
       border-color:rgba(255,255,255,.18);
       box-shadow:none;
     }
+    .btn-primary{
+      background:linear-gradient(135deg, #f1d08a, #c49b55);
+      color:#1b120d;
+      border-color:transparent;
+      font-weight:700;
+      box-shadow:0 18px 40px rgba(196,155,85,.25);
+    }
+    .btn-primary:hover{
+      background:linear-gradient(135deg, #f7dda2, #cfab67);
+    }
+    .btn-reserve{
+      padding:14px 22px;
+      font-size:14px;
+      letter-spacing:.08em;
+    }
 
     .hero{
       min-height:88vh;
       display:flex;
       align-items:center;
       background:
-        linear-gradient(180deg, rgba(15,11,9,.45) 10%, rgba(15,11,9,.85) 65%),
+        linear-gradient(90deg, rgba(10,8,6,.85) 0%, rgba(10,8,6,.55) 50%, rgba(10,8,6,.25) 100%),
+        linear-gradient(180deg, rgba(15,11,9,.55) 10%, rgba(15,11,9,.9) 70%),
         url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=80") center/cover;
       padding:120px 0 80px;
       position:relative;
@@ -178,6 +194,38 @@
       flex-wrap:wrap;
       gap:12px;
       margin-bottom:32px;
+    }
+    .hero-actions .btn{
+      min-width:190px;
+    }
+
+    .trust-bar{
+      border-top:1px solid rgba(255,255,255,.08);
+      border-bottom:1px solid rgba(255,255,255,.08);
+      background:rgba(10,8,7,.4);
+      padding:18px 0;
+    }
+    .trust-items{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:14px;
+      align-items:center;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-size:11px;
+      color:var(--muted);
+    }
+    .trust-item{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      justify-content:center;
+    }
+    .trust-item strong{
+      color:var(--gold-2);
+      font-weight:700;
+      font-size:13px;
+      letter-spacing:.22em;
     }
 
     .hero-quick{
@@ -494,6 +542,8 @@
         font-size:11px;
       }
       .quick-link.contact-link img{width:38px;height:38px}
+      .trust-items{grid-template-columns:1fr;text-align:center}
+      .trust-item{justify-content:center}
       .section{padding:64px 0}
       .section-title{font-size:30px}
       .info-grid{grid-template-columns:1fr}
@@ -538,7 +588,7 @@
           <a href="#noticias">Noticias</a>
           <a href="#contacto">Contacto</a>
         </nav>
-        <a class="btn btn-outline" href="tel:+34900000000">Reservar</a>
+        <a class="btn btn-primary btn-reserve" href="tel:+34900000000">Reservar mesa</a>
       </div>
     </header>
 
@@ -546,11 +596,11 @@
       <section class="hero" id="inicio">
         <div class="hero-inner reveal" style="--delay:.05s">
           <p class="kicker">Alternativa gastronomica en pleno centro de Valmora</p>
-          <h1>Un restaurante encajado para ser descubierto</h1>
+          <h1>Una experiencia gastronomica para disfrutar sin prisas</h1>
           <p class="lead">Bruma Dorada es un espacio acogedor y moderno, con cocina de vanguardia y producto fresco. Una carta casera con toques de mundo para disfrutar sin prisa.</p>
           <div class="hero-actions">
-            <a class="btn" href="#restaurant">Descubre nuestro restaurante</a>
-            <a class="btn btn-ghost" href="#carta">Ver nuestra carta</a>
+            <a class="btn btn-primary" href="#reservar">Reservar mesa ⭐</a>
+            <a class="btn btn-ghost" href="#carta">Ver carta 🍽️</a>
           </div>
           <div class="hero-quick">
             <a class="quick-link" href="#restaurant">
@@ -570,6 +620,14 @@
               <span>Contacto</span>
             </a>
           </div>
+        </div>
+      </section>
+
+      <section class="trust-bar">
+        <div class="container trust-items">
+          <div class="trust-item"><strong>★★★★★</strong> 4,8 en Google</div>
+          <div class="trust-item">Mas de 1.200 clientes satisfechos</div>
+          <div class="trust-item">Recomendado por Guia Local</div>
         </div>
       </section>
 
