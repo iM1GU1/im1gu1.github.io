@@ -251,12 +251,6 @@
       object-fit:contain;
       filter:drop-shadow(0 6px 12px rgba(0,0,0,.5));
     }
-    .quick-link.contact-link img{
-      width:44px;
-      height:44px;
-      object-fit:contain;
-      filter:drop-shadow(0 8px 16px rgba(0,0,0,.55));
-    }
 
     .section{
       padding:90px 0;
@@ -333,6 +327,21 @@
       color:var(--gold-2);
       margin-bottom:6px;
     }
+    .map-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      margin-top:12px;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid rgba(201,168,106,.5);
+      color:var(--gold-2);
+      font-size:12px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      background:rgba(0,0,0,.2);
+    }
+    .map-btn:hover{background:rgba(255,255,255,.08)}
 
     .menu-wrapper{
       display:grid;
@@ -465,6 +474,18 @@
       padding:30px 0 60px;
       color:var(--muted);
     }
+    .footer-map{
+      margin-top:18px;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .footer-map iframe{
+      display:block;
+      width:100%;
+      height:240px;
+      border:0;
+    }
     .footer-nav{
       display:flex;
       gap:16px;
@@ -540,7 +561,6 @@
         padding:10px 12px;
         font-size:11px;
       }
-      .quick-link.contact-link img{width:38px;height:38px}
       .trust-items{grid-template-columns:1fr;text-align:center}
       .trust-item{justify-content:center}
       .section{padding:64px 0}
@@ -600,22 +620,10 @@
             <a class="btn btn-ghost" href="#carta">Ver carta</a>
           </div>
           <div class="hero-quick">
-            <a class="quick-link" href="#restaurant">
-              <img src="assets/icon-restaurante.png" alt="" />
-              Bruma Dorada
-            </a>
-            <a class="quick-link" href="#carta">
-              <img src="assets/icon-carta.png" alt="" />
-              Nuestra Carta
-            </a>
-            <a class="quick-link" href="#reservar">
-              <img src="assets/icon-reservar.png" alt="" />
-              Reservar
-            </a>
-            <a class="quick-link contact-link" href="#contacto">
-              <img src="assets/contacto.png" alt="Contacto" />
-              <span>Contacto</span>
-            </a>
+            <a class="quick-link" href="#restaurant">Bruma Dorada</a>
+            <a class="quick-link" href="#carta">Nuestra Carta</a>
+            <a class="quick-link" href="#reservar">Reservar</a>
+            <a class="quick-link" href="#contacto">Contacto</a>
           </div>
         </div>
       </section>
@@ -639,6 +647,7 @@
                 <strong>Direccion</strong>
                 Calle Aurora 27<br />
                 00000 Valmora
+                <a class="map-btn" href="https://maps.google.com/maps?q=Calle%20Aurora%2027%20Valmora" target="_blank" rel="noopener">Abrir en Google Maps</a>
               </div>
               <div class="info-card">
                 <strong>Telefono</strong>
@@ -789,6 +798,12 @@
           <a href="#reservar">Reservar</a>
           <a href="#contacto">Contacto</a>
         </nav>
+      </div>
+      <div class="container footer-map">
+        <iframe
+          title="Mapa Bruma Dorada"
+          src="https://maps.google.com/maps?q=Calle%20Aurora%2027%20Valmora&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"></iframe>
       </div>
     </footer>
   </div>
