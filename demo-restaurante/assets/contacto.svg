@@ -1,0 +1,15 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 170" width="240" height="170">
+  <g stroke="#f6efe8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M40 98V58h160v40l-34 10-46-8-46 8-34-10z" />
+    <path d="M90 44c0-12 10-22 22-22s22 10 22 22c0 16-22 44-22 44s-22-28-22-44z" />
+    <circle cx="112" cy="44" r="6" fill="#f6efe8" stroke="none" />
+    <path d="M148 34c0-12 10-22 22-22s22 10 22 22c0 16-22 44-22 44s-22-28-22-44z" />
+    <circle cx="170" cy="34" r="6" fill="#f6efe8" stroke="none" />
+    <circle cx="74" cy="78" r="4" fill="#f6efe8" stroke="none" />
+    <circle cx="94" cy="82" r="4" fill="#f6efe8" stroke="none" />
+    <circle cx="114" cy="86" r="4" fill="#f6efe8" stroke="none" />
+    <circle cx="134" cy="90" r="4" fill="#f6efe8" stroke="none" />
+    <circle cx="154" cy="86" r="4" fill="#f6efe8" stroke="none" />
+  </g>
+  <text x="120" y="152" text-anchor="middle" fill="#f6efe8" font-size="26" font-family="Manrope, sans-serif" font-weight="600">Contacto</text>
+</svg>
