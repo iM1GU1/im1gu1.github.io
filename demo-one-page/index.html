@@ -1,0 +1,283 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo One-Page | Bruma Dorada</title>
+  <meta name="description" content="Demo one-page de restaurante con CTA claros, carta resumida y contacto inmediato." />
+  <meta name="theme-color" content="#15120f" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#15120f;
+      --bg-2:#1d1713;
+      --text:#f6efe8;
+      --muted:#c8b8aa;
+      --gold:#c9a86a;
+      --gold-2:#e6c791;
+      --line:rgba(255,255,255,.12);
+      --card:rgba(255,255,255,.05);
+      --shadow:0 24px 60px rgba(0,0,0,.45);
+      --serif:"Cormorant Garamond", serif;
+      --sans:"Manrope", sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(201,168,106,.14), transparent 45%),
+        radial-gradient(circle at 90% 0%, rgba(230,199,145,.12), transparent 40%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.7;
+      -webkit-text-size-adjust:100%;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+
+    .container{width:min(1100px, 92vw);margin:0 auto}
+    .section{padding:80px 0}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.25);
+      font-weight:600;letter-spacing:.04em;background:rgba(255,255,255,.06);
+      transition:transform .2s ease, background .2s ease;
+    }
+    .btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.12)}
+    .btn-primary{
+      background:linear-gradient(135deg, #f0d08a, #c59b55);
+      color:#1b120d;border-color:transparent;box-shadow:0 18px 40px rgba(197,155,85,.25);
+      font-weight:700;
+    }
+
+    .hero{
+      min-height:88vh;display:flex;align-items:center;position:relative;
+      background:
+        linear-gradient(90deg, rgba(10,8,6,.85) 0%, rgba(10,8,6,.55) 50%, rgba(10,8,6,.2) 100%),
+        linear-gradient(180deg, rgba(15,11,9,.55) 10%, rgba(15,11,9,.9) 70%),
+        url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=80") center/cover;
+      padding:120px 0 80px;border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .hero-inner{width:min(650px, 92vw);margin-left:max(6vw, 20px)}
+    .brand{
+      font-family:var(--serif);letter-spacing:.3em;text-transform:uppercase;font-size:12px;color:var(--gold-2);
+    }
+    .hero h1{
+      font-family:var(--serif);font-size:52px;line-height:1.05;margin:14px 0 10px;
+      text-shadow:0 18px 40px rgba(0,0,0,.4);
+    }
+    .hero .lead{color:var(--muted);font-size:18px;margin:0 0 18px;max-width:56ch}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 22px}
+    .rating{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:14px}
+    .rating span{color:var(--gold-2);letter-spacing:.2em}
+
+    .cta-bar{
+      border-top:1px solid rgba(255,255,255,.08);
+      border-bottom:1px solid rgba(255,255,255,.08);
+      background:rgba(10,8,7,.5);
+      padding:18px 0;
+    }
+    .cta-bar .container{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center}
+
+    .title{
+      font-family:var(--serif);font-size:34px;margin:0 0 16px;text-align:center;
+    }
+    .features{
+      display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:16px;margin-top:24px;
+    }
+    .feature{
+      border:1px solid var(--line);background:var(--card);border-radius:16px;padding:16px;
+      display:flex;flex-direction:column;gap:8px;text-align:center;
+    }
+    .feature .icon{font-size:26px}
+    .feature h3{margin:0;font-family:var(--serif);font-size:18px}
+    .feature p{margin:0;color:var(--muted);font-size:14px}
+
+    .menu{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start;
+    }
+    .menu-card{
+      border:1px solid var(--line);background:var(--card);border-radius:18px;padding:20px;
+    }
+    .menu-item{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.1)}
+    .menu-item:last-child{border-bottom:none}
+    .menu-item span:last-child{color:var(--gold-2)}
+    .menu-photo{
+      border-radius:18px;overflow:hidden;min-height:320px;
+      background:url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80") center/cover;
+      box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.1);
+    }
+
+    .info-grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:16px;margin-top:24px}
+    .info-card{border:1px solid var(--line);background:var(--card);border-radius:16px;padding:16px}
+    .info-card strong{display:block;color:var(--gold-2);letter-spacing:.2em;font-size:11px;text-transform:uppercase;margin-bottom:6px}
+
+    .reviews{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:16px;margin-top:24px}
+    .review{border:1px solid var(--line);background:var(--card);border-radius:16px;padding:16px;color:var(--muted);font-size:14px}
+    .review strong{color:var(--gold-2);display:block;margin-bottom:8px}
+
+    .contact-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+
+    footer{
+      border-top:1px solid rgba(255,255,255,.08);
+      padding:30px 0 60px;color:var(--muted);font-size:13px;text-align:center;
+    }
+
+    @media (max-width: 980px){
+      .features{grid-template-columns:repeat(2, minmax(0,1fr))}
+      .menu{grid-template-columns:1fr}
+      .info-grid{grid-template-columns:1fr}
+      .reviews{grid-template-columns:1fr}
+      .hero h1{font-size:40px}
+    }
+    @media (max-width: 640px){
+      .hero{min-height:80vh;padding:110px 0 70px}
+      .hero-inner{margin-left:0;padding:0 18px}
+      .hero-actions .btn{width:100%}
+      .features{grid-template-columns:1fr}
+      .cta-bar .container{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <div class="brand">Bruma Dorada</div>
+        <h1>Saborea cada momento</h1>
+        <p class="lead">Cocina de autor con ingredientes frescos en un ambiente acogedor. Disfruta una experiencia gastronomica sin igual.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/34900000000">Reservar mesa</a>
+          <a class="btn" href="#carta">Ver nuestra carta</a>
+        </div>
+        <div class="rating"><span>★★★★★</span> 4,8 en Google (1.200+ reseñas)</div>
+      </div>
+    </section>
+
+    <section class="cta-bar">
+      <div class="container">
+        <a class="btn btn-primary" href="https://wa.me/34900000000">WhatsApp</a>
+        <a class="btn" href="tel:+34900000000">Llamar ahora</a>
+        <a class="btn" href="#contacto">Reservar ahora</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="title">Nuestra experiencia</h2>
+        <div class="features">
+          <div class="feature">
+            <div class="icon">🥕</div>
+            <h3>Producto fresco</h3>
+            <p>Ingredientes de temporada seleccionados a diario.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">👨‍🍳</div>
+            <h3>Cocina propia</h3>
+            <p>Recetas caseras con tecnica y sabor.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">🤝</div>
+            <h3>Trato cercano</h3>
+            <p>Un equipo atento para que vuelvas siempre.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">📍</div>
+            <h3>Ubicacion</h3>
+            <p>En el centro de Valmora, facil acceso.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="carta">
+      <div class="container">
+        <h2 class="title">Carta destacada</h2>
+        <div class="menu">
+          <div class="menu-card">
+            <div class="menu-item"><span>Bruschetta de tomate</span><span>8€</span></div>
+            <div class="menu-item"><span>Carpaccio de res</span><span>12€</span></div>
+            <div class="menu-item"><span>Solomillo al romero</span><span>22€</span></div>
+            <div class="menu-item"><span>Risotto de setas</span><span>18€</span></div>
+            <div class="menu-item"><span>Tarta de queso casera</span><span>6€</span></div>
+            <div class="menu-item"><span>Coulant de chocolate</span><span>7€</span></div>
+            <div style="margin-top:16px">
+              <a class="btn" href="https://wa.me/34900000000">Ver carta completa</a>
+            </div>
+          </div>
+          <div class="menu-photo" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="info">
+      <div class="container">
+        <h2 class="title">Informacion practica</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <strong>Horario</strong>
+            Lun a Dom 13:00-16:00 / 20:00-23:30
+          </div>
+          <div class="info-card">
+            <strong>Direccion</strong>
+            Calle Aurora 27, Valmora
+          </div>
+          <div class="info-card">
+            <strong>Telefono</strong>
+            +34 900 000 000
+          </div>
+          <div class="info-card" style="grid-column:1 / -1">
+            <strong>Zona</strong>
+            Barrio Mercado · A 2 min de la plaza principal
+          </div>
+        </div>
+        <div style="margin-top:16px;border-radius:16px;overflow:hidden;border:1px solid var(--line)">
+          <iframe
+            title="Mapa"
+            src="https://maps.google.com/maps?q=Valmora&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="260" style="border:0;display:block" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="resenas">
+      <div class="container">
+        <h2 class="title">Lo que dicen de nosotros</h2>
+        <div class="reviews">
+          <div class="review"><strong>"Volveremos seguro"</strong>Producto excelente y ambiente muy cuidado.</div>
+          <div class="review"><strong>"Servicio rapido"</strong>Reservamos por WhatsApp y nos atendieron genial.</div>
+          <div class="review"><strong>"Cena perfecta"</strong>Platos sabrosos y precios razonables.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="container">
+        <h2 class="title">Reserva ahora</h2>
+        <p style="text-align:center;color:var(--muted);margin:0">WhatsApp o llamada directa. Sin formularios.</p>
+        <div class="contact-cta">
+          <a class="btn btn-primary" href="https://wa.me/34900000000">WhatsApp</a>
+          <a class="btn" href="tel:+34900000000">+34 900 000 000</a>
+          <a class="btn" href="mailto:reservas@brumadorada.com">reservas@brumadorada.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© <span id="y"></span> Bruma Dorada · Demo One-Page</div>
+    <div>Instagram · Facebook · Aviso legal</div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
