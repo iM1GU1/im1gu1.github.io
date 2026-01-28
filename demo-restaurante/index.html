@@ -203,15 +203,10 @@
       object-fit:contain;
       filter:drop-shadow(0 6px 12px rgba(0,0,0,.5));
     }
-    .quick-link.contact-link{
-      gap:0;
-      padding:8px 16px;
-      justify-content:center;
-    }
     .quick-link.contact-link img{
-      width:120px;
-      max-width:100%;
-      height:auto;
+      width:44px;
+      height:44px;
+      object-fit:contain;
       filter:drop-shadow(0 8px 16px rgba(0,0,0,.55));
     }
 
@@ -459,8 +454,7 @@
       .hero-actions{flex-direction:column;align-items:flex-start}
       .hero-quick{gap:12px}
       .quick-link{width:100%;justify-content:flex-start}
-      .quick-link.contact-link{justify-content:center}
-      .quick-link.contact-link img{width:110px}
+      .quick-link.contact-link img{width:40px;height:40px}
       .main-nav{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));row-gap:8px;gap:10px}
       .main-nav a{font-size:11px;letter-spacing:.1em}
       .topbar .container{padding:12px 0}
@@ -513,8 +507,9 @@
               <img src="assets/icon-reservar.png" alt="" />
               Reservar
             </a>
-            <a class="quick-link" href="#contacto">
-              <img src="assets/contacto.svg" alt="Contacto" />
+            <a class="quick-link contact-link" href="#contacto">
+              <img src="assets/contacto.png" alt="Contacto" />
+              <span>Contacto</span>
             </a>
           </div>
         </div>
