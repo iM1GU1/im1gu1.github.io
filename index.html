@@ -143,6 +143,7 @@
     @media (max-width: 940px){
       .hero{grid-template-columns:1fr}
       h1{font-size:38px}
+      .qr-card{grid-template-columns:1fr}
     }
     @media (max-width: 760px){
       .grid-3,.grid-2{grid-template-columns:1fr}
@@ -211,6 +212,29 @@
     .price ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
     .price li{margin:6px 0}
     .price .buy{margin-top:14px}
+
+    /* QR */
+    .qr-card{
+      display:grid;grid-template-columns: 1.05fr .95fr;gap:18px;align-items:center;
+      padding:18px;
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .qr-visual{
+      border-radius: 16px;
+      background: rgba(0,0,0,.25);
+      padding:10px;
+      display:flex;align-items:center;justify-content:center;
+    }
+    .qr-visual img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:12px;
+    }
+    .qr-content h3{margin:0 0 8px;font-size:22px}
+    .qr-content p{margin:0 0 14px;color:var(--muted);font-size:14px}
 
     /* Process */
     .step{
@@ -340,6 +364,20 @@
         <div class="card">
           <h2>🔎 Preparada para Google</h2>
           <p>Estructura clara y base SEO para encontrarte.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- QR -->
+    <div class="section" id="qr">
+      <div class="card qr-card">
+        <div class="qr-visual">
+          <img src="assets/qr-card.svg" alt="QR en servilleta para carta o menú" />
+        </div>
+        <div class="qr-content">
+          <h3>QR para tu carta/menu</h3>
+          <p>Acceso fácil y limpio a tu menú mediante códigos QR en servilletas u otros soportes.</p>
+          <a class="btn btn-primary" href="https://wa.me/34633936388?text=Hola%20Miguel%2C%20quiero%20QR%20para%20mi%20carta%2Fmen%C3%BA." target="_blank" rel="noopener">Saber más</a>
         </div>
       </div>
     </div>
