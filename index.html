@@ -143,7 +143,6 @@
     @media (max-width: 940px){
       .hero{grid-template-columns:1fr}
       h1{font-size:38px}
-      .qr-card{grid-template-columns:1fr}
     }
     @media (max-width: 760px){
       .grid-3,.grid-2{grid-template-columns:1fr}
@@ -212,29 +211,6 @@
     .price ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
     .price li{margin:6px 0}
     .price .buy{margin-top:14px}
-
-    /* QR */
-    .qr-card{
-      display:grid;grid-template-columns: 1.05fr .95fr;gap:18px;align-items:center;
-      padding:18px;
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .qr-visual{
-      border-radius: 16px;
-      background: rgba(0,0,0,.25);
-      padding:10px;
-      display:flex;align-items:center;justify-content:center;
-    }
-    .qr-visual img{
-      width:100%;
-      height:auto;
-      display:block;
-      border-radius:12px;
-    }
-    .qr-content h3{margin:0 0 8px;font-size:22px}
-    .qr-content p{margin:0 0 14px;color:var(--muted);font-size:14px}
 
     /* Process */
     .step{
@@ -368,20 +344,6 @@
       </div>
     </div>
 
-    <!-- QR -->
-    <div class="section" id="qr">
-      <div class="card qr-card">
-        <div class="qr-visual">
-          <img src="assets/qr-card.svg" alt="QR en servilleta para carta o menú" />
-        </div>
-        <div class="qr-content">
-          <h3>QR para su carta/menú</h3>
-          <p>Acceso fácil y limpio a su menú mediante códigos QR con acceso directo.</p>
-          <a class="btn btn-primary" href="https://wa.me/34633936388?text=Hola%20Miguel%2C%20quisiera%20QR%20para%20mi%20carta%2Fmen%C3%BA." target="_blank" rel="noopener">Saber más</a>
-        </div>
-      </div>
-    </div>
-
     <!-- Process -->
     <div class="section" id="proceso">
       <div class="title-row">
@@ -429,27 +391,22 @@
         <div class="card price">
           <div style="font-weight:800;font-size:18px">PLAN RESTAURANTE/BAR CAFETERÍA</div>
           <ul>
-            <li>Secciones de la página web:</li>
-            <li>Sección imagen del negocio (nombre del negocio, fotos del local, fotos de platos destacados, enlace a redes sociales).</li>
-            <li>Contacto (teléfono, WhatsApp, email).</li>
-            <li>Localización (dirección, mapa de Google Maps).</li>
-            <li>Secciones como horarios, ubicación, redes sociales, sobre nosotros, etc.</li>
-            <li>Botón WhatsApp / email / teléfono, según prefiera.</li>
             <li>Diseño profesional y personalizado a su gusto.</li>
-            <li>Página de carta o menú con acceso directo desde QR escaneable.</li>
+            <li>Alojamiento de la página web en servidor de alta velocidad y máxima seguridad ubicado en España.</li>
             <li>Dominio con nombre personalizado para su negocio.</li>
+            <li>Página de carta o menú con acceso directo desde QR escaneable.</li>
+            <li>Secciones de la página web:
+              <ol style="margin:6px 0 0 18px;color:var(--muted);font-size:14px">
+                <li>Sección imagen del negocio (nombre del negocio, fotos del local, fotos de platos destacados, enlace a redes sociales).</li>
+                <li>Contacto (teléfono, WhatsApp, email).</li>
+                <li>Localización (dirección, mapa de Google Maps).</li>
+                <li>Horarios.</li>
+              </ol>
+            </li>
           </ul>
           <div class="buy">
             <a class="btn btn-primary" href="https://wa.me/34633936388?text=Hola%20Miguel%2C%20quisiera%20el%20Plan.%20Mi%20negocio%20es%20_____%20y%20estoy%20en%20_____." target="_blank" rel="noopener">Solicitar este plan</a>
           </div>
-        </div>
-      </div>
-
-      <div class="grid" style="margin-top:12px">
-        <div class="card">
-          <h2>Extras (no incluidos)</h2>
-          <p>Cambios pequeños (como actualizar menú, horarios o textos) sin coste durante todo el año. No se preocupe.</p>
-          <p>Cambios grandes, nuevas secciones completas o rediseñar la página se cobran aparte.</p>
         </div>
       </div>
 
