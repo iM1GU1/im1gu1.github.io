@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Rebel | Real Food</title>
+    <!-- Google fonts for our typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with logo and navigation -->
+    <header>
+        <div class="header-wrapper">
+            <div class="logo">
+                <!-- Simple vector logo defined in a separate SVG file -->
+                <img src="images/logo.svg" alt="Green Rebel logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#order">Order Lunch</a></li>
+                    <li><a href="#bowl">Rebel Bowl</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#catering-call">Catering</a></li>
+                    <li><a href="#contact">Let's Connect</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero slider -->
+        <section id="home" class="hero">
+            <div class="slides">
+                <!-- First slide -->
+                <div class="slide active" style="background-image: url('images/hero.jpg');">
+                    <div class="overlay">
+                        <h1>Don't eat less.<br>Just eat real.</h1>
+                        <a class="btn" href="#catering-call">Order catering online</a>
+                    </div>
+                </div>
+                <!-- Second slide for variety -->
+                <div class="slide" style="background-image: url('images/hero.jpg');">
+                    <div class="overlay">
+                        <h1>Fresh ingredients.<br>Real flavour.</h1>
+                        <a class="btn" href="#menu">Discover our menu</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slider controls -->
+            <div class="controls">
+                <button class="prev" aria-label="Previous slide">&#10094;</button>
+                <button class="next" aria-label="Next slide">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Menu call‑to‑action panel (craft paper look) -->
+        <section id="menu" class="panel craft">
+            <div class="container">
+                <div class="text">
+                    <h2>Green Rebel Menu</h2>
+                    <p>The choice is easy when it's real food.<br>Eat real. Feel real.</p>
+                    <a class="btn-outline" href="#menu">Discover menu</a>
+                </div>
+                <div class="decor decor-right">
+                    <img src="images/carrots.jpg" alt="Carrots hanging">
+                </div>
+            </div>
+        </section>
+
+        <!-- Catering call‑to‑action panel (dark background) -->
+        <section id="catering-call" class="panel dark">
+            <div class="container">
+                <div class="decor decor-left">
+                    <img src="images/eggs.jpg" alt="Eggs, flour and whisk">
+                </div>
+                <div class="text">
+                    <h2>Planning a working lunch or event?</h2>
+                    <p>Feel good about the food you're ordering. Don't hesitate to call us for any advice. We're here to help you!</p>
+                    <a class="btn-outline" href="#catering-call">See catering menu</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rebel Bowl program panel (craft paper look) -->
+        <section id="bowl" class="panel craft">
+            <div class="container">
+                <div class="text">
+                    <h2>Rebel Bowl</h2>
+                    <p>We came up with a smart program that will help you do your part for the environment while saving 50 cents each time you purchase a fresh delicious Green Rebel salad.</p>
+                    <a class="btn-outline" href="#bowl">Learn more</a>
+                </div>
+                <div class="decor decor-right">
+                    <img src="images/beets.jpg" alt="Beet greens">
+                </div>
+            </div>
+        </section>
+
+        <!-- About panel (chalkboard look) -->
+        <section id="about" class="panel chalk">
+            <div class="container">
+                <div class="text">
+                    <h2>About Green Rebel</h2>
+                    <p>Once upon a time, co‑founders Ian O’Meara and Darragh McFeely had a renowned beachside bistro in New Zealand that served real food. Fresh, delicious, wholesome, authentic food which was sourced from a local produce stand called “The Green Rebel”.</p>
+                    <a class="btn-outline" href="#about">Read more</a>
+                </div>
+                <div class="stamp">
+                    <span>Fresh<br>100%<br>guaranteed</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer with contact details and links -->
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-column contact">
+                <img src="images/logo.svg" alt="Green Rebel logo">
+                <p class="contact-info">Call us: 613‑232‑3642<br>Email: <a href="mailto:contact@greenrebel.ca">contact@greenrebel.ca</a></p>
+                <a class="btn" href="#catering-call">Order catering online</a>
+            </div>
+            <div class="footer-column links">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#catering-call">Catering</a></li>
+                    <li><a href="#bowl">Rebel Bowl</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-column links">
+                <h3>More</h3>
+                <ul>
+                    <li><a href="#contact">Let's Connect</a></li>
+                    <li><a href="#nutrition">Nutritional Information</a></li>
+                    <li><a href="#privacy">Privacy & Terms</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Green Rebel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

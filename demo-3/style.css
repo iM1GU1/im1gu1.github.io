@@ -1,0 +1,381 @@
+/*
+ * Custom stylesheet for the Green Rebel inspired landing page.
+ * Colours and typography are based on earthy craft paper tones and
+ * chalkboard textures to evoke warmth and authenticity. Components
+ * such as panels, buttons and the hero slider are styled to
+ * approximate the look and feel of the original site while being
+ * entirely bespoke.
+ */
+
+:root {
+    --primary: #7ea819;      /* olive green accent used for buttons */
+    --dark-bg: #2d2d2d;     /* chalkboard dark background */
+    --craft-bg: #e4d1ae;    /* light kraft paper colour */
+    --text-dark: #43392f;   /* dark brown text colour */
+    --white: #ffffff;
+    --footer-bg: #3f2f22;   /* deep brown for footer */
+    --footer-bottom-bg: #34281e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+/* Header and navigation */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--footer-bg);
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-wrapper {
+    /* The wrapper stretches the full width of the viewport so that
+       navigation doesn’t get truncated on narrow screens. */
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.main-nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--primary);
+}
+
+/* Hero slider */
+.hero {
+    position: relative;
+    height: 80vh;
+    min-height: 500px;
+    overflow: hidden;
+    background-color: var(--dark-bg);
+}
+
+.hero .slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero .slide.active {
+    opacity: 1;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: var(--white);
+    max-width: 45%;
+}
+
+.hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+.btn,
+.btn-outline {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn:hover {
+    background-color: #5e691f;
+}
+
+.btn-outline {
+    color: var(--text-dark);
+    border: 2px solid var(--text-dark);
+}
+
+.btn-outline:hover {
+    background-color: var(--text-dark);
+    color: var(--white);
+}
+
+/* Slider controls */
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+}
+
+.controls button {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.controls button:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* Generic panel styles */
+.panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.panel .container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+
+.panel .text {
+    flex: 1 1 500px;
+    padding: 1rem;
+}
+
+.panel .text h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.panel .text p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    max-width: 600px;
+}
+
+.panel .decor {
+    flex: 1 1 400px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel .decor img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Specific panel backgrounds */
+.craft {
+    background-color: var(--craft-bg);
+}
+
+.dark {
+    background-color: var(--dark-bg);
+    color: var(--white);
+}
+
+/* In dark and chalk panels, invert outline button colours for contrast */
+.dark .btn-outline,
+.chalk .btn-outline {
+    color: var(--craft-bg);
+    border-color: var(--craft-bg);
+}
+
+.dark .btn-outline:hover,
+.chalk .btn-outline:hover {
+    background-color: var(--craft-bg);
+    color: var(--dark-bg);
+}
+
+.dark .text h2,
+.dark .text p {
+    color: var(--white);
+}
+
+.chalk {
+    background-color: #333333;
+    color: var(--white);
+}
+
+.chalk .text h2,
+.chalk .text p {
+    color: var(--white);
+}
+
+/* Stamp in chalk section */
+.chalk .stamp {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%) rotate(-10deg);
+    width: 140px;
+    height: 140px;
+    border: 2px dashed var(--craft-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    color: var(--craft-bg);
+    letter-spacing: 0.05em;
+    padding: 10px;
+    pointer-events: none;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--white);
+}
+
+.footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-column {
+    flex: 1 1 220px;
+}
+
+.footer-column img {
+    height: 60px;
+    margin-bottom: 0.75rem;
+}
+
+.footer-column h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+    color: var(--craft-bg);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--white);
+}
+
+.contact-info {
+    margin: 0.5rem 0 1.5rem;
+    font-size: 0.9rem;
+}
+
+.contact-info a {
+    color: var(--craft-bg);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    background-color: var(--footer-bottom-bg);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .hero .overlay {
+        max-width: 70%;
+        left: 5%;
+    }
+    .panel .container {
+        flex-direction: column;
+    }
+    .panel .decor {
+        order: -1;
+        margin-bottom: 1.5rem;
+    }
+    .stamp {
+        position: static;
+        transform: rotate(0);
+        margin-top: 2rem;
+    }
+}

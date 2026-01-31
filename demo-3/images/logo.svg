@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Simple logo for the Green Rebel inspired site.  The design uses a
+  circular emblem containing the letters "GR" and a wordmark set to the
+  right.  Colours match the craft paper palette defined in the CSS.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" aria-labelledby="logoTitle" role="img">
+  <title id="logoTitle">Green Rebel logo</title>
+  <!-- Outer circle -->
+  <circle cx="40" cy="40" r="36" fill="none" stroke="#e4d1ae" stroke-width="4" />
+  <!-- Monogram text -->
+  <text x="40" y="52" text-anchor="middle" font-family="Bebas Neue, sans-serif" font-size="34" fill="#e4d1ae">GR</text>
+  <!-- Wordmark removed to keep the logo compact inside header -->
+</svg>
