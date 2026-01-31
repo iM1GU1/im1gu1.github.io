@@ -398,6 +398,7 @@ header {
 
 .menu-list span:last-child {
     font-weight: 600;
+    white-space: nowrap;
 }
 
 /* Contact page */
