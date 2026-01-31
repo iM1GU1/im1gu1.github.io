@@ -1,5 +1,5 @@
 /*
- * Custom stylesheet for the Green Rebel inspired landing page.
+ * Custom stylesheet for the San Lu inspired landing page.
  * Colours and typography are based on earthy craft paper tones and
  * chalkboard textures to evoke warmth and authenticity. Components
  * such as panels, buttons and the hero slider are styled to
@@ -43,7 +43,7 @@ header {
 
 .header-wrapper {
     /* The wrapper stretches the full width of the viewport so that
-       navigation doesn’t get truncated on narrow screens. */
+       navigation doesn't get truncated on narrow screens. */
     width: 100%;
     margin: 0;
     display: flex;
