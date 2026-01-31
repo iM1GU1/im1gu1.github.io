@@ -52,8 +52,26 @@ header {
     padding: 1rem;
 }
 
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
 .logo img {
     height: 50px;
+}
+
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.08em;
+    color: #f0d7b5;
 }
 
 .main-nav ul {
