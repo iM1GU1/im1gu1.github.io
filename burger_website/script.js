@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     // IntersectionObserver to reveal elements on scroll
     const animateElements = document.querySelectorAll('.animate');
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const observerOptions = {
+        threshold: isMobile ? 0.08 : 0.2,
+        rootMargin: isMobile ? '0px 0px 200px 0px' : '0px 0px 0px 0px'
+    };
     const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -8,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 obs.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.2 });
+    }, observerOptions);
 
     animateElements.forEach(el => {
         observer.observe(el);
