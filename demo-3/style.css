@@ -584,3 +584,51 @@ footer {
         justify-content: center;
     }
 }
+
+@media (max-width: 720px) {
+    .header-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        gap: 0.6rem 0.9rem;
+    }
+
+    .main-nav li {
+        white-space: nowrap;
+    }
+
+    .main-nav a {
+        font-size: 0.72rem;
+    }
+
+    .panel {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .panel .container {
+        align-items: stretch;
+    }
+
+    .panel .text,
+    .panel .decor {
+        flex: 1 1 auto;
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+
+    .panel .decor {
+        margin-bottom: 1rem;
+    }
+
+    .panel .decor img {
+        max-height: 240px;
+    }
+}
