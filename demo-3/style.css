@@ -386,7 +386,7 @@ header {
 .menu-list li {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 0.45rem 0;
     border-bottom: 1px dashed #cbb790;
     font-size: 0.95rem;
@@ -399,6 +399,15 @@ header {
 .menu-list span:last-child {
     font-weight: 600;
     white-space: nowrap;
+}
+
+.menu-list span:first-child {
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.menu-list span:last-child {
+    flex-shrink: 0;
 }
 
 /* Contact page */
