@@ -293,6 +293,10 @@
       background: linear-gradient(90deg, var(--primary), var(--accent));
       opacity:.7;
     }
+    .plan-block strong{
+      color:var(--text);
+      font-weight:700;
+    }
     .plan-block h3{
       margin:4px 0 10px;
       font-size:16px;
@@ -304,10 +308,6 @@
       font-size:14px;
     }
     .plan-block li{margin:6px 0}
-    .plan-highlight{
-      border:1px solid var(--line);
-      background: var(--surface);
-    }
     @media (max-width: 900px){
       .plan-grid{grid-template-columns:1fr}
     }
@@ -550,7 +550,7 @@
         <div class="plan-shell" style="margin-top:18px">
           <div class="plan-title">Qué incluye el plan</div>
           <div class="plan-grid">
-            <div class="plan-block plan-highlight">
+            <div class="plan-block">
               <h3>Web base (1 página)</h3>
               <ul>
                 <li>Diseño profesional responsive + publicación online.</li>
