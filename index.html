@@ -263,12 +263,54 @@
     .tech-card p{margin:0;color:var(--muted);font-size:13px}
 
     /* Plan */
-    .plan-card{padding:22px}
-    .plan-card h3{margin:0 0 12px;font-size:20px}
-    .plan-note{margin:14px 0 6px;color:var(--muted);font-size:14px}
-    .plan-note strong{color:var(--text)}
-    .plan-card ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
-    .plan-card li{margin:6px 0}
+    .plan-shell{
+      padding:24px;
+      background: linear-gradient(120deg, rgba(14,165,164,.08), rgba(245,158,11,.08));
+      border:1px solid var(--line);
+      border-radius: calc(var(--radius) + 6px);
+      box-shadow: var(--shadow);
+    }
+    .plan-title{margin:0 0 14px;font-size:20px}
+    .plan-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:16px;
+    }
+    .plan-block{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: var(--shadow-soft);
+      position:relative;
+      overflow:hidden;
+    }
+    .plan-block::before{
+      content:"";
+      position:absolute;
+      inset:0 0 auto 0;
+      height:3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      opacity:.7;
+    }
+    .plan-block h3{
+      margin:4px 0 10px;
+      font-size:16px;
+    }
+    .plan-block ul{
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .plan-block li{margin:6px 0}
+    .plan-highlight{
+      border:1px dashed rgba(14,165,164,.35);
+      background: var(--surface-2);
+    }
+    @media (max-width: 900px){
+      .plan-grid{grid-template-columns:1fr}
+    }
 
     /* Portfolio */
     .demo-card{display:flex;flex-direction:column;gap:12px}
@@ -505,39 +547,50 @@
           </div>
         </div>
 
-        <div class="card plan-card" style="margin-top:18px">
-          <h3>Web base (1 página)</h3>
-          <ul>
-            <li>Diseño profesional responsive + publicación online.</li>
-            <li>Secciones recomendadas: Inicio, Sobre nosotros, Menú/Carta, Galería y Contacto.</li>
-            <li>Integración: Google Maps, botón de WhatsApp y enlaces a redes sociales.</li>
-            <li>SEO básico: títulos, descripciones y estructura técnica.</li>
-          </ul>
+        <div class="plan-shell" style="margin-top:18px">
+          <div class="plan-title">Qué incluye el plan</div>
+          <div class="plan-grid">
+            <div class="plan-block plan-highlight">
+              <h3>Web base (1 página)</h3>
+              <ul>
+                <li>Diseño profesional responsive + publicación online.</li>
+                <li>Secciones recomendadas: Inicio, Sobre nosotros, Menú/Carta, Galería y Contacto.</li>
+                <li>Integración: Google Maps, botón de WhatsApp y enlaces a redes sociales.</li>
+                <li>SEO básico: títulos, descripciones y estructura técnica.</li>
+              </ul>
+            </div>
 
-          <p class="plan-note"><strong>Extras opcionales</strong></p>
-          <ul>
-            <li><strong>Carta digital + QR.</strong> Página independiente con la carta/menú. Código QR personalizado listo para imprimir (mesas, flyers, servilletas…).</li>
-            <li><strong>Sistema de reservas online (Google Calendar).</strong> Formulario en la web: día, hora, nombre y número de personas. Solo se muestran horas disponibles (las no disponibles aparecen deshabilitadas). El restaurante gestiona reservas y bloqueos desde su Google Calendar. Cualquier cambio en Google Calendar se refleja en la web.</li>
-            <li><strong>Otros extras.</strong> Multiidioma, reseñas de Google y secciones adicionales.</li>
-          </ul>
+            <div class="plan-block">
+              <h3>Extras opcionales</h3>
+              <ul>
+                <li><strong>Carta digital + QR.</strong> Página independiente con la carta/menú. Código QR personalizado listo para imprimir (mesas, flyers, servilletas…).</li>
+                <li><strong>Sistema de reservas online (Google Calendar).</strong> Formulario en la web: día, hora, nombre y número de personas. Solo se muestran horas disponibles (las no disponibles aparecen deshabilitadas). El restaurante gestiona reservas y bloqueos desde su Google Calendar. Cualquier cambio en Google Calendar se refleja en la web.</li>
+                <li><strong>Otros extras.</strong> Multiidioma, reseñas de Google y secciones adicionales.</li>
+              </ul>
+            </div>
 
-          <p class="plan-note"><strong>Mantenimiento</strong></p>
-          <ul>
-            <li>Hosting + dominio + certificado SSL (HTTPS).</li>
-            <li>Copias de seguridad semanales.</li>
-            <li>Soporte por WhatsApp/email (respuesta en 24–48h laborables).</li>
-            <li>Cambios sencillos: textos, horarios, precios, actualización de carta y 1–3 fotos.</li>
-            <li><strong>No incluye (se presupuesta aparte):</strong> nuevas secciones/páginas o rediseños, funcionalidades nuevas y urgencias fuera de horario.</li>
-          </ul>
+            <div class="plan-block">
+              <h3>Mantenimiento</h3>
+              <ul>
+                <li>Hosting + dominio + certificado SSL (HTTPS).</li>
+                <li>Copias de seguridad semanales.</li>
+                <li>Soporte por WhatsApp/email (respuesta en 24–48h laborables).</li>
+                <li>Cambios sencillos: textos, horarios, precios, actualización de carta y 1–3 fotos.</li>
+                <li><strong>No incluye (se presupuesta aparte):</strong> nuevas secciones/páginas o rediseños, funcionalidades nuevas y urgencias fuera de horario.</li>
+              </ul>
+            </div>
 
-          <p class="plan-note"><strong>Dominio, hosting y baja</strong></p>
-          <ul>
-            <li>El dominio queda a nombre del cliente/empresa.</li>
-            <li>Con mantenimiento activo, yo gestiono dominio y hosting.</li>
-            <li>Si el cliente se da de baja: se entrega una copia de la web (si está pagada) y la renovación del dominio pasa a ser responsabilidad del cliente.</li>
-          </ul>
+            <div class="plan-block">
+              <h3>Dominio, hosting y baja</h3>
+              <ul>
+                <li>El dominio queda a nombre del cliente/empresa.</li>
+                <li>Con mantenimiento activo, yo gestiono dominio y hosting.</li>
+                <li>Si el cliente se da de baja: se entrega una copia de la web (si está pagada) y la renovación del dominio pasa a ser responsabilidad del cliente.</li>
+              </ul>
+            </div>
+          </div>
 
-          <div style="margin-top:16px">
+          <div style="margin-top:18px;display:flex;justify-content:flex-start">
             <a class="btn btn-primary" href="https://wa.me/34633936388?text=Hola%20Miguel%2C%20quisiera%20el%20Plan.%20Mi%20negocio%20es%20_____%20y%20estoy%20en%20_____." target="_blank" rel="noopener">Solicitar este plan</a>
           </div>
         </div>
