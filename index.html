@@ -62,6 +62,42 @@
       background: var(--page-bg);
       color: var(--text);
       line-height: 1.6;
+      min-height:100vh;
+      position:relative;
+      overflow-x:hidden;
+    }
+    body::before,
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:0;
+      opacity:0;
+      transition:opacity .4s ease;
+    }
+    body::before{
+      background-image:
+        radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,.85) 40%, transparent 41%),
+        radial-gradient(1.6px 1.6px at 140px 110px, rgba(255,255,255,.65) 40%, transparent 41%),
+        radial-gradient(1.2px 1.2px at 260px 200px, rgba(255,255,255,.75) 40%, transparent 41%);
+      background-size: 240px 240px, 320px 320px, 420px 420px;
+      animation: starfall 14s linear infinite;
+    }
+    :root[data-theme="dark"] body::before{opacity:.6;}
+    body::after{
+      background:
+        radial-gradient(600px 280px at 20% 0%, rgba(255,159,102,.35), transparent 60%),
+        radial-gradient(700px 350px at 85% 10%, rgba(255,110,168,.25), transparent 65%),
+        radial-gradient(500px 300px at 50% 100%, rgba(255,192,123,.22), transparent 60%);
+      filter: blur(0.5px);
+      animation: shimmer 18s ease-in-out infinite alternate;
+    }
+    :root:not([data-theme="dark"]) body::after{opacity:.7;}
+
+    header, main, .footer{
+      position:relative;
+      z-index:1;
     }
 
     a{color:inherit;text-decoration:none}
@@ -77,26 +113,30 @@
     }
     .header .wrap{
       max-width:100%;
-      padding-left:14px;
-      padding-right:10px;
+      padding-left:16px;
+      padding-right:8px;
     }
     .nav-bar{
-      display:flex;align-items:center;gap:20px;
+      display:grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items:center;
+      gap:16px;
       padding:14px 0;
     }
     .brand{
       display:flex;align-items:center;gap:12px;
       font-weight:800;
+      justify-self:start;
     }
     .brand img{height:62px;width:auto}
-    .nav{display:flex;gap:32px;flex-wrap:wrap;align-items:center;margin-left:12px}
+    .nav{display:flex;gap:32px;flex-wrap:wrap;align-items:center;justify-self:center}
     .nav a{font-weight:600;color:var(--muted)}
     .nav a:hover{color:var(--text)}
     .actions{
-      margin-left:auto;
       display:flex;
       align-items:center;
       gap:10px;
+      justify-self:end;
     }
 
     /* Buttons */
@@ -247,6 +287,14 @@
       from{opacity:0;transform:translateY(14px)}
       to{opacity:1;transform:translateY(0)}
     }
+    @keyframes starfall{
+      from{background-position: 0 0, 0 0, 0 0;}
+      to{background-position: 0 1200px, 0 900px, 0 700px;}
+    }
+    @keyframes shimmer{
+      from{transform:translateY(-8px)}
+      to{transform:translateY(8px)}
+    }
     .reveal{opacity:0;animation:rise .8s ease forwards;animation-delay:var(--delay, 0s)}
 
     @media (prefers-reduced-motion: reduce){
@@ -268,6 +316,7 @@
       .cta-box{align-items:flex-start}
       .actions{gap:8px}
       .theme-toggle{width:38px;height:38px}
+      .nav-bar{grid-template-columns: 1fr auto}
     }
   </style>
 </head>
