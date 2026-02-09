@@ -502,12 +502,246 @@ form button {
     margin-top: 0.5rem;
 }
 
+.reservation-widget {
+    flex: 2;
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) minmax(300px, 1.2fr);
+    gap: 2rem;
+    min-width: 300px;
+}
+
+.calendar-panel,
+.booking-panel {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.calendar-title {
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--primary);
+}
+
+.calendar-nav {
+    border: none;
+    background: rgba(214, 35, 51, 0.1);
+    color: var(--primary);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.calendar-nav:hover {
+    background: rgba(214, 35, 51, 0.2);
+    transform: translateY(-1px);
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666666;
+    margin-bottom: 0.5rem;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+}
+
+.calendar-day {
+    border: 1px solid #e5e5e5;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.calendar-day.available {
+    border-color: rgba(23, 170, 88, 0.5);
+}
+
+.calendar-day.unavailable {
+    background: rgba(214, 35, 51, 0.12);
+    border-color: rgba(214, 35, 51, 0.5);
+    color: var(--primary);
+}
+
+.calendar-day.selected {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+}
+
+.calendar-day.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.calendar-day.empty {
+    border: none;
+    background: transparent;
+}
+
+.calendar-legend {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: #666666;
+}
+
+.calendar-legend .legend {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.calendar-legend .available {
+    background: rgba(23, 170, 88, 0.6);
+}
+
+.calendar-legend .unavailable {
+    background: rgba(214, 35, 51, 0.6);
+}
+
+.booking-panel h3 {
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.selected-date {
+    font-size: 0.95rem;
+    color: #666666;
+    margin-bottom: 1rem;
+}
+
+.booking-panel label {
+    font-weight: 600;
+    color: #444444;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.booking-panel input,
+.booking-panel textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.booking-panel input {
+    margin-bottom: 1rem;
+}
+
+#slots-container {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+
+.slots-group h4 {
+    font-size: 1rem;
+    color: #444444;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+.slots-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.slot-btn {
+    border: 1px solid transparent;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.slot-btn.available {
+    background: rgba(23, 170, 88, 0.15);
+    color: #147246;
+    border-color: rgba(23, 170, 88, 0.4);
+}
+
+.slot-btn.available:hover {
+    transform: translateY(-1px);
+    background: rgba(23, 170, 88, 0.25);
+}
+
+.slot-btn.unavailable {
+    background: rgba(214, 35, 51, 0.12);
+    color: #8f202a;
+    cursor: not-allowed;
+}
+
+.slot-btn.selected {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+}
+
+.availability-message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #444444;
+}
+
+.availability-message.error {
+    color: var(--primary);
+}
+
+.form-status {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #2a6b3f;
+}
+
+.form-status.error {
+    color: var(--primary);
+}
+
+.reservation-submit {
+    width: 100%;
+}
+
 @media (max-width: 992px) {
     .contact-info {
         flex-direction: column;
     }
     .map-form {
         flex-direction: column;
+    }
+    .reservation-widget {
+        grid-template-columns: 1fr;
     }
 }
 

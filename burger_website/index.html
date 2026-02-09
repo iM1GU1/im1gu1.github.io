@@ -176,16 +176,49 @@
                     <div class="map">
                         <iframe title="Mapa" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.052%2C39.97%2C-0.012%2C39.99&amp;layer=mapnik&amp;marker=39.98%2C-0.032" frameborder="0" allowfullscreen></iframe>
                     </div>
-                    <form id="reservation-form">
-                        <h3>Reserva tu mesa</h3>
-                        <input type="text" name="name" placeholder="Nombre" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="tel" name="phone" placeholder="Teléfono" required>
-                        <input type="date" name="date" required>
-                        <input type="time" name="time" required>
-                        <textarea name="message" placeholder="Mensaje (opcional)"></textarea>
-                        <button type="submit" class="btn primary">Enviar</button>
-                    </form>
+                    <div class="reservation-widget" data-restaurant="burger-house" data-api-base="">
+                        <div class="calendar-panel">
+                            <div class="calendar-header">
+                                <button type="button" class="calendar-nav" data-dir="prev" aria-label="Mes anterior">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <div class="calendar-title">Mes</div>
+                                <button type="button" class="calendar-nav" data-dir="next" aria-label="Mes siguiente">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="calendar-weekdays">
+                                <span>L</span>
+                                <span>M</span>
+                                <span>X</span>
+                                <span>J</span>
+                                <span>V</span>
+                                <span>S</span>
+                                <span>D</span>
+                            </div>
+                            <div class="calendar-days"></div>
+                            <div class="calendar-legend">
+                                <span class="legend available"></span> Disponible
+                                <span class="legend unavailable"></span> Sin cupo
+                            </div>
+                        </div>
+                        <div class="booking-panel">
+                            <h3>Reserva tu mesa</h3>
+                            <p class="selected-date">Selecciona un dia para ver disponibilidad.</p>
+                            <label for="party-size">Numero de personas</label>
+                            <input id="party-size" type="number" min="1" max="20" value="2">
+                            <div id="slots-container"></div>
+                            <p id="availability-message" class="availability-message"></p>
+                            <form id="reservation-form">
+                                <input type="text" name="name" placeholder="Nombre" required>
+                                <input type="email" name="email" placeholder="Email">
+                                <input type="tel" name="phone" placeholder="Telefono">
+                                <textarea name="notes" placeholder="Notas (opcional)"></textarea>
+                                <button type="submit" class="btn primary reservation-submit">Confirmar reserva</button>
+                                <p class="form-status"></p>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

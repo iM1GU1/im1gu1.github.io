@@ -1,0 +1,27 @@
+{
+  "restaurants": [
+    {
+      "slug": "burger-house",
+      "name": "Burger House",
+      "timezone": "Europe/Madrid",
+      "calendarId": "your_calendar_id@group.calendar.google.com",
+      "capacityMax": 60,
+      "slotIntervalMinutes": 15,
+      "reservationDurationMinutes": 90,
+      "turnos": [
+        {
+          "name": "comida",
+          "start": "13:00",
+          "end": "16:00",
+          "capacityMax": 60
+        },
+        {
+          "name": "cena",
+          "start": "20:00",
+          "end": "23:30",
+          "capacityMax": 60
+        }
+      ]
+    }
+  ]
+}
