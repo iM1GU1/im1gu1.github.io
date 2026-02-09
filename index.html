@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Webs modernas para negocios | iM1GU1</title>
   <meta name="description" content="Diseño y desarrollo webs modernas para negocios locales. Trato directo, entrega rápida y mantenimiento incluido." />
-  <meta name="theme-color" content="#f6f7fb" />
+  <meta name="theme-color" content="#f8f1e6" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,12 +14,12 @@
 
   <style>
     :root{
-      --bg: #f6f7fb;
-      --surface: #ffffff;
-      --surface-2: #f1f5f9;
+      --bg: #f8f1e6;
+      --surface: #fff9ef;
+      --surface-2: #f8eddc;
       --text: #0f172a;
       --muted: #334155;
-      --line: #e2e8f0;
+      --line: #e8d9c2;
       --primary: #0ea5a4;
       --primary-2: #22c55e;
       --accent: #f59e0b;
@@ -32,7 +32,7 @@
         radial-gradient(900px 600px at 90% 0%, rgba(245,158,11,.15), transparent 55%),
         radial-gradient(700px 520px at 50% 120%, rgba(14,165,164,.08), transparent 60%),
         var(--bg);
-      --header-bg: rgba(246,247,251,.86);
+      --header-bg: rgba(248,241,230,.9);
     }
 
     :root[data-theme="dark"]{
@@ -215,20 +215,6 @@
       gap:40px;
       align-items:center;
       justify-items:center;
-    }
-    .hero-kicker{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:8px 14px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:var(--surface);
-      color:var(--muted);
-      font-size:13px;
-      font-weight:700;
-      letter-spacing:.2px;
-      margin-bottom:10px;
     }
     .eyebrow{
       display:inline-flex;align-items:center;gap:8px;
@@ -487,7 +473,6 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-text reveal" style="--delay:.05s">
-          <div class="hero-kicker">Bienvenido</div>
           <h1>Webs modernas que convierten visitas en clientes reales</h1>
           <p class="lead">Soy Miguel y me dedico a hacer paginas webs personalizadas para empresas. Diseño adaptado para todo tipo de dispositivos, respuesta rapida y con estrategia SEO para posicionar en google. Si buscas una web para tu empresa estás en el lugar correcto.</p>
           <div class="hero-actions">
@@ -648,7 +633,7 @@
           </div>
 
           <div style="margin-top:18px;display:flex;justify-content:flex-start">
-            <a class="btn btn-primary" href="https://wa.me/34633936388?text=Hola%20Miguel%2C%20quisiera%20el%20Plan.%20Mi%20negocio%20es%20_____%20y%20estoy%20en%20_____." target="_blank" rel="noopener">Solicitar este plan</a>
+            <a class="btn btn-primary" href="https://wa.me/34633936388" target="_blank" rel="noopener">Solicitar este plan</a>
           </div>
         </div>
       </div>
@@ -779,7 +764,7 @@
 
     root.setAttribute("data-theme", initialTheme);
     if (themeMeta) {
-      themeMeta.setAttribute("content", initialTheme === "dark" ? "#0b0f17" : "#f6f7fb");
+      themeMeta.setAttribute("content", initialTheme === "dark" ? "#0b0f17" : "#f8f1e6");
     }
 
     if (themeToggle) {
@@ -789,7 +774,7 @@
         root.setAttribute("data-theme", next);
         localStorage.setItem("theme", next);
         if (themeMeta) {
-          themeMeta.setAttribute("content", next === "dark" ? "#0b0f17" : "#f6f7fb");
+          themeMeta.setAttribute("content", next === "dark" ? "#0b0f17" : "#f8f1e6");
         }
       });
     }
