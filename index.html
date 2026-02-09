@@ -3,374 +3,375 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Webs bonitas y efectivas para negocios | iM1GU1</title>
-  <meta name="description" content="Creo webs modernas para negocios locales: rápidas, móviles, WhatsApp y Google. Diseño limpio y profesional." />
-  <meta name="theme-color" content="#0f1218" />
+  <title>Webs modernas para negocios | iM1GU1</title>
+  <meta name="description" content="Diseño y desarrollo webs modernas para negocios locales. Trato directo, entrega rápida y mantenimiento incluido." />
+  <meta name="theme-color" content="#f6f7fb" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     :root{
-      --bg: #0f1218;
-      --bg-2: #111826;
-      --card: rgba(255,255,255,.06);
-      --card-2: rgba(255,255,255,.08);
-      --text: rgba(255,255,255,.94);
-      --muted: rgba(255,255,255,.7);
-      --line: rgba(255,255,255,.12);
-      --accent: #18c2b2;
-      --accent-2: #ffb347;
-      --shadow: 0 28px 70px rgba(0,0,0,.45);
+      --bg: #f6f7fb;
+      --surface: #ffffff;
+      --surface-2: #f1f5f9;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #e2e8f0;
+      --primary: #0ea5a4;
+      --primary-2: #22c55e;
+      --accent: #f59e0b;
+      --shadow: 0 24px 60px rgba(15, 23, 42, .12);
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, .08);
       --radius: 18px;
+      --radius-lg: 26px;
     }
 
     *{box-sizing:border-box}
     html,body{margin:0}
     body{
-      font-family: "Sora", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+      font-family: "Manrope", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
       background:
-        radial-gradient(1100px 700px at 15% -10%, rgba(24, 194, 178,.22), transparent 60%),
-        radial-gradient(900px 600px at 90% 10%, rgba(255, 179, 71,.18), transparent 55%),
-        radial-gradient(1000px 700px at 50% 120%, rgba(98, 154, 255,.10), transparent 55%),
+        radial-gradient(800px 500px at 10% -10%, rgba(14,165,164,.18), transparent 60%),
+        radial-gradient(900px 600px at 90% 0%, rgba(245,158,11,.15), transparent 55%),
+        radial-gradient(700px 520px at 50% 120%, rgba(14,165,164,.08), transparent 60%),
         var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
 
-    a{color:inherit}
-    .wrap{max-width:1120px;margin:0 auto;padding:30px 18px 90px}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
 
-    /* Top bar */
-    .top{
-      display:flex;justify-content:space-between;align-items:center;
-      gap:14px;margin-bottom:18px
+    /* Header */
+    .header{
+      position:sticky;top:0;z-index:30;
+      background: rgba(246,247,251,.86);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-bar{
+      display:flex;align-items:center;justify-content:space-between;gap:18px;
+      padding:16px 0;
     }
     .brand{
-      display:flex;flex-direction:column;align-items:center;
-      gap:4px;
-      text-decoration:none;
-      min-width:180px;
+      display:flex;align-items:center;gap:12px;
+      font-weight:800;
     }
-    .brand-divider{
-      width:120px;
-      height:1px;
-      background: rgba(255,255,255,.14);
-      margin-top:-2px;
-    }
-    .logo{
-      display:flex;align-items:center;
-      height:72px;
-      padding:0;
-    }
-    .logo img{
-      height:72px;
-      width:auto;
-      display:block;
-      object-fit:contain;
-    }
-    .brand small{
-      display:block;
-      font-size:12.5px;
-      letter-spacing:.2px;
-      line-height:1.2;
-      color: var(--muted);
-    }
-    .brand strong{
-      font-family:"Fraunces", serif;
-      font-size:20px;
-      color:#6aa9ff;
-    }
-    .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-    .pill{
+    .brand img{height:44px;width:auto}
+    .brand span{display:block;font-weight:600;color:var(--muted);font-size:12px}
+    .brand strong{display:block;font-family:"Fraunces", serif;font-size:18px}
+    .nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+    .nav a{font-weight:600;color:var(--muted)}
+    .nav a:hover{color:var(--text)}
+
+    /* Buttons */
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:12px 18px;border-radius:999px;
       border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      padding:10px 12px;border-radius:999px;
-      text-decoration:none;font-weight:600;font-size:13px
+      font-weight:700;background:var(--surface);
+      box-shadow: var(--shadow-soft);
     }
-    .pill:hover{background: rgba(255,255,255,.07)}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{
+      border:none;color:#062e2e;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    }
+    .btn-ghost{background:transparent;box-shadow:none}
+    .btn-outline{background:var(--surface);}
+    .wa-icon{width:18px;height:18px}
 
     /* Hero */
-    .hero{
-      display:grid;grid-template-columns: 1.15fr .85fr;gap:18px;
-      padding:24px;border:1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border-radius: calc(var(--radius) + 6px);
-      box-shadow: var(--shadow);
-      position:relative;
-      overflow:hidden;
-    }
-    .hero:before{
-      content:"";
-      position:absolute;inset:-2px;
-      background: radial-gradient(600px 260px at 20% 10%, rgba(24,194,178,.22), transparent 60%),
-                  radial-gradient(520px 260px at 80% 0%, rgba(255,179,71,.18), transparent 60%);
-      pointer-events:none;
-    }
-    .hero > *{position:relative}
-    .kicker{
-      display:inline-flex;gap:8px;align-items:center;
-      font-weight:600;font-size:12px;color:var(--muted);
+    .hero{padding:48px 0 24px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      background: var(--surface);
       border:1px solid var(--line);
-      padding:8px 12px;border-radius:999px;background: rgba(0,0,0,.18)
+      color:var(--muted);
+      padding:6px 12px;border-radius:999px;font-weight:600;font-size:12px
     }
     h1{
       font-family:"Fraunces", serif;
-      font-size:44px;line-height:1.05;margin:14px 0 10px
+      font-size:46px;line-height:1.05;margin:16px 0 12px
     }
-    .lead{color:var(--muted);font-size:16px;max-width:60ch;margin:0 0 16px}
-    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-    .trust-line{margin-top:12px;color:var(--muted);font-size:13px}
-    .btn{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:12px 14px;border-radius:14px;
-      border:1px solid var(--line);
-      text-decoration:none;font-weight:700;
-      background: rgba(255,255,255,.06);
+    .lead{color:var(--muted);font-size:17px;max-width:56ch;margin:0 0 18px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-points{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:12px;margin-top:18px}
+    .point{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+    .point strong{display:block;font-size:14px}
+    .point span{display:block;color:var(--muted);font-size:13px}
+    .hero-card{
+      background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);
+      padding:22px;box-shadow:var(--shadow)
     }
-    .btn .wa-icon{
-      width:18px;height:18px;
-      display:inline-block;
-    }
-    .btn:hover{background: rgba(255,255,255,.09)}
-    .btn-primary{
-      border:none;
-      color:#0b1212;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 18px 50px rgba(24,194,178,.18);
-    }
-    .btn-primary:hover{filter: brightness(1.05)}
-    .hero-panel{
-      border:1px solid var(--line);
-      background: rgba(0,0,0,.18);
-      border-radius: var(--radius);
-      padding:18px;
-      display:flex;flex-direction:column;gap:12px;justify-content:center
-    }
-    .hero-panel h2{margin:0 0 6px;font-size:16px}
-    .hero-panel p{margin:0;color:var(--muted);font-size:14px}
-    .hero-list{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
-    .divider{height:1px;background:var(--line);margin:6px 0}
+    .hero-card h3{margin:0 0 8px;font-size:18px}
+    .hero-card ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+    .hero-card li{margin:6px 0}
+    .mini-card{margin-top:16px;padding:14px;border-radius:16px;background:var(--surface-2)}
+    .mini-card strong{display:block;margin-bottom:4px}
 
     /* Sections */
-    .section{margin-top:22px}
-    .grid{display:grid;gap:12px}
-    .grid-3{grid-template-columns: repeat(3, minmax(0,1fr))}
-    .grid-2{grid-template-columns: repeat(2, minmax(0,1fr))}
-    @media (max-width: 940px){
-      .hero{grid-template-columns:1fr}
-      h1{font-size:38px}
-    }
-    @media (max-width: 760px){
-      .grid-3,.grid-2{grid-template-columns:1fr}
-      .top{
-        flex-direction:column;
-        align-items:stretch;
-        gap:12px;
-      }
-      .brand{justify-content:flex-start}
-      .nav{
-        width:100%;
-        justify-content:flex-start;
-        display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap:8px;
-      }
-      .pill{
-        width:100%;
-        text-align:center;
-        padding:10px 10px;
-        font-size:12px;
-      }
-      .wrap{padding-bottom:150px}
-      .floating .bar{
-        border-radius: 18px;
-        align-items:flex-start;
-        flex-wrap:wrap;
-        padding:16px 20px;
-      }
-      .floating .bar > div{
-        flex:1 1 240px;
-        min-width:0;
-        padding-left:6px;
-        padding-right:6px;
-      }
-      .floating .bar > div > div{
-        font-size:16px;
-        line-height:1.2;
-      }
-      .floating .bar small{font-size:12px}
-      .floating .bar .btn{width:100%;justify-content:center}
-      .floating .bar small{display:block}
-    }
+    .section{padding:32px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap}
+    .section-head h2{margin:6px 0 0;font-size:28px}
+    .section-head p{margin:8px 0 0;color:var(--muted);max-width:60ch}
+
+    .grid{display:grid;gap:16px}
+    .grid-2{grid-template-columns:repeat(2, minmax(0,1fr))}
+    .grid-3{grid-template-columns:repeat(3, minmax(0,1fr))}
+    .grid-4{grid-template-columns:repeat(4, minmax(0,1fr))}
 
     .card{
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.05);
-      border-radius: var(--radius);
-      padding:16px;
+      background:var(--surface);border:1px solid var(--line);
+      border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-soft)
     }
-    .card:hover{background: rgba(255,255,255,.07)}
-    .card h2{margin:0 0 6px;font-size:16px}
+    .card h3{margin:10px 0 6px;font-size:17px}
     .card p{margin:0;color:var(--muted);font-size:14px}
-
-    .title-row{
-      display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;
-      margin:20px 0 10px
-    }
-    .title-row h3{margin:0;font-size:18px}
-    .title-row span{color:var(--muted);font-size:14px}
-
-    /* Demos */
-    .demo-card{
-      display:flex;flex-direction:column;gap:12px;
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-    }
-    .demo-card .demo-head{
-      display:flex;justify-content:space-between;align-items:center;gap:10px
-    }
-    .badge{
-      display:inline-flex;align-items:center;gap:8px;
-      font-size:12px;color:var(--muted);
-      border:1px solid var(--line);
-      padding:6px 10px;border-radius:999px;background: rgba(0,0,0,.15)
+    .icon{
+      width:44px;height:44px;border-radius:14px;display:grid;place-items:center;
+      font-weight:800;color:#0f172a;background:rgba(14,165,164,.12)
     }
 
-    /* Pricing */
-    .price{
-      padding:18px;
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+    /* Tech */
+    .tech-card{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+    .tech-icon{
+      width:48px;height:48px;border-radius:16px;display:grid;place-items:center;
+      font-weight:800;color:#0f172a;background:var(--tech-bg, rgba(15,23,42,.08))
     }
-    .amount{font-size:30px;font-weight:800;margin:4px 0 6px}
-    .fee{font-size:16px;font-weight:600;color:var(--muted);margin:0 0 10px}
-    .plan-note{margin:0 0 10px;color:var(--muted);font-size:14px}
-    .plan-note strong{color:var(--text);font-weight:700}
-    .price ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
-    .price li{margin:6px 0}
-    .price .buy{margin-top:14px}
+    .tech-card h3{margin:0;font-size:16px}
+    .tech-card p{margin:0;color:var(--muted);font-size:13px}
 
-    /* Process */
-    .step{
-      display:flex;gap:12px;align-items:flex-start
-    }
-    .step .num{
-      width:36px;height:36px;border-radius:12px;
-      display:grid;place-items:center;font-weight:800;
-      background: rgba(24,194,178,.18);
-      border:1px solid rgba(24,194,178,.5)
-    }
+    /* Plan */
+    .plan-card{padding:22px}
+    .plan-card h3{margin:0 0 12px;font-size:20px}
+    .plan-note{margin:14px 0 6px;color:var(--muted);font-size:14px}
+    .plan-note strong{color:var(--text)}
+    .plan-card ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+    .plan-card li{margin:6px 0}
+
+    /* Portfolio */
+    .demo-card{display:flex;flex-direction:column;gap:12px}
 
     /* FAQ */
     details{
       border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      border-radius: var(--radius);
-      padding:12px 14px;
+      background:var(--surface);
+      border-radius:var(--radius);
+      padding:12px 16px;
+      box-shadow:var(--shadow-soft)
     }
     summary{cursor:pointer;font-weight:700}
     details p{color:var(--muted);margin:10px 0 0;font-size:14px}
 
-    /* Floating CTA */
-    .floating{
-      position:fixed;left:0;right:0;bottom:14px;
-      display:flex;justify-content:center;pointer-events:none;
-      padding:0 12px;z-index:50
+    /* CTA */
+    .cta-section{
+      margin-top:24px;
+      background: linear-gradient(120deg, rgba(14,165,164,.18), rgba(245,158,11,.16));
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
     }
-    .floating .bar{
-      pointer-events:auto;
-      max-width:1100px;width:100%;
-      border:1px solid var(--line);
-      background: rgba(0,0,0,.35);
-      backdrop-filter: blur(10px);
-      border-radius: 18px;
-      padding:14px 20px;
-      display:flex;gap:10px;align-items:center;justify-content:space-between;
-      box-shadow: 0 25px 70px rgba(0,0,0,.45);
+    .cta-box{
+      display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+      padding:28px 0
     }
-    .floating .bar small{color:var(--muted)}
+    .cta-box h2{margin:0;font-size:28px}
+    .cta-box p{margin:8px 0 0;color:var(--muted)}
+
     .footer{
-      margin-top:24px;color:var(--muted);font-size:13px;
+      padding:22px 0 40px;color:var(--muted);font-size:13px;
       display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap
+    }
+
+    /* Reveal animation */
+    @keyframes rise{
+      from{opacity:0;transform:translateY(14px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+    .reveal{opacity:0;animation:rise .8s ease forwards;animation-delay:var(--delay, 0s)}
+
+    @media (prefers-reduced-motion: reduce){
+      .reveal{animation:none;opacity:1}
+      .btn:hover{transform:none}
+    }
+
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      h1{font-size:38px}
+      .hero-points{grid-template-columns:1fr}
+      .grid-4{grid-template-columns:repeat(2, minmax(0,1fr))}
+    }
+    @media (max-width: 760px){
+      .nav{display:none}
+      .hero{padding-top:32px}
+      .grid-3,.grid-2{grid-template-columns:1fr}
+      .grid-4{grid-template-columns:1fr}
+      .cta-box{align-items:flex-start}
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <!-- Top -->
-    <div class="top">
+  <header class="header" id="inicio">
+    <div class="wrap nav-bar">
       <a class="brand" href="#inicio">
-        <div class="logo">
-          <img src="assets/logo.png" alt="Logo de MiWeb" />
+        <img src="assets/logo.png" alt="Logo de MiWeb" />
+        <div>
+          <strong>MiWeb</strong>
+          <span>Webs para negocios</span>
         </div>
-        <span class="brand-divider" aria-hidden="true"></span>
-        <small>Webs para negocios</small>
       </a>
-
-      <div class="nav">
-        <a class="pill" href="#servicio">Servicio</a>
-        <a class="pill" href="#precios">Plan</a>
-        <a class="pill" href="#ejemplos">Ejemplos</a>
-        <a class="pill" href="#clientes">Clientes</a>
-        <a class="pill" href="#faq">Dudas</a>
-        <a class="pill" href="https://wa.me/34633936388">WhatsApp</a>
-      </div>
+      <nav class="nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#tecnologia">Tecnología</a>
+        <a href="#plan">Plan</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#faq">Dudas</a>
+      </nav>
+      <a class="btn btn-primary" href="https://wa.me/34633936388"><img class="wa-icon" src="assets/whatsapp.png" alt="WhatsApp" />Hablemos</a>
     </div>
+  </header>
 
-    <!-- Hero -->
-    <section class="hero" id="inicio">
-      <div>
-        <div class="kicker">Webs para negocios</div>
-        <h1>Una web clara que convierte visitas en clientes</h1>
-        <p class="lead">
-          Diseño limpio, mensajes directos y llamadas a la acción para que le contacten sin dudar.
-        </p>
-
-        <div class="cta">
-          <a class="btn btn-primary" href="https://wa.me/34633936388"><img class="wa-icon" src="assets/whatsapp.png" alt="WhatsApp" /> Solicitar web por WhatsApp</a>
-          <a class="btn" href="#ejemplos">Ver ejemplos</a>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text reveal" style="--delay:.05s">
+          <div class="eyebrow">Diseño web para negocios locales</div>
+          <h1>Webs modernas que convierten visitas en clientes reales</h1>
+          <p class="lead">Soy Miguel y desarrollo webs claras, rápidas y con estrategia. Diseño, copy y publicación para que su negocio se vea profesional desde el primer día.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/34633936388">Solicitar presupuesto</a>
+            <a class="btn btn-ghost" href="#portfolio">Ver ejemplos</a>
+          </div>
+          <div class="hero-points">
+            <div class="point">
+              <strong>Entrega rápida</strong>
+              <span>Normalmente en 7-10 días</span>
+            </div>
+            <div class="point">
+              <strong>Contacto directo</strong>
+              <span>WhatsApp visible y accesible</span>
+            </div>
+            <div class="point">
+              <strong>Soporte real</strong>
+              <span>Respuesta en 24-48h laborables</span>
+            </div>
+          </div>
         </div>
 
-        <div class="trust-line">Entrega en pocos días · Diseño móvil · WhatsApp visible · Base SEO</div>
-      </div>
-
-      <aside class="hero-panel">
-        <div>
-          <h2>Ideal para</h2>
-          <ul class="hero-list">
-            <li>Restaurantes y bares</li>
-            <li>Peluquerías y estética</li>
-            <li>Clínicas, talleres y tiendas</li>
+        <aside class="hero-card reveal" style="--delay:.15s">
+          <h3>Lo que entrego con su web</h3>
+          <ul>
+            <li>Diseño profesional responsive y publicación online.</li>
+            <li>Secciones clave para generar confianza y contactos.</li>
+            <li>Integraciones con Google Maps, WhatsApp y redes.</li>
+            <li>SEO básico para aparecer en búsquedas locales.</li>
           </ul>
-        </div>
-        <div class="divider"></div>
-        <div>
-          <h2>Su cliente hace clic y…</h2>
-          <p>Le llama, le escribe por WhatsApp o llega con el mapa.</p>
-        </div>
-        <div class="divider"></div>
-        <div>
-          <h2>Mi promesa</h2>
-          <p>Sin complicaciones. Se lo dejo listo y bonito.</p>
-        </div>
-      </aside>
+          <div class="mini-card">
+            <strong>Trato cercano</strong>
+            <p>Soy desarrollador independiente y trabajo con usted de forma directa. Sin intermediarios ni historias.</p>
+          </div>
+        </aside>
+      </div>
     </section>
 
-    <div id="servicio"></div>
+    <section class="section" id="servicios">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Servicios</div>
+            <h2>Todo lo necesario para una web que vende</h2>
+            <p>Un servicio completo: diseño, desarrollo, publicación y mantenimiento. Usted se centra en su negocio.</p>
+          </div>
+          <a class="btn btn-outline" href="#plan">Ver plan</a>
+        </div>
 
-    <!-- Pricing -->
-    <div class="section" id="precios">
-      <div class="title-row">
-        <h3>Plan</h3>
+        <div class="grid grid-4" style="margin-top:20px">
+          <article class="card reveal" style="--delay:.05s">
+            <div class="icon">01</div>
+            <h3>Diseño y copy</h3>
+            <p>Mensajes claros, estructura ordenada y diseño que transmite confianza.</p>
+          </article>
+          <article class="card reveal" style="--delay:.1s">
+            <div class="icon">02</div>
+            <h3>Desarrollo rápido</h3>
+            <p>Web ligera y optimizada para móvil, con carga veloz.</p>
+          </article>
+          <article class="card reveal" style="--delay:.15s">
+            <div class="icon">03</div>
+            <h3>Integraciones</h3>
+            <p>Google Maps, WhatsApp, redes sociales y extras según necesidad.</p>
+          </article>
+          <article class="card reveal" style="--delay:.2s">
+            <div class="icon">04</div>
+            <h3>Mantenimiento</h3>
+            <p>Dominio, hosting, SSL y cambios sencillos incluidos.</p>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="grid">
-        <div class="card price">
-          <div style="font-weight:800;font-size:18px">PLAN RESTAURANTE/BAR CAFETERÍA</div>
+    <section class="section" id="tecnologia">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Tecnología</div>
+            <h2>Herramientas modernas para una web robusta</h2>
+            <p>Stack actual que permite velocidad, escalabilidad y mantenimiento limpio.</p>
+          </div>
+        </div>
 
-          <p class="plan-note"><strong>Web base (1 página)</strong></p>
+        <div class="grid grid-3" style="margin-top:20px">
+          <div class="card tech-card reveal" style="--delay:.05s">
+            <div class="tech-icon" style="--tech-bg:rgba(14,165,164,.16)">A</div>
+            <h3>Astro</h3>
+            <p>Framework moderno y ultrarrápido.</p>
+          </div>
+          <div class="card tech-card reveal" style="--delay:.1s">
+            <div class="tech-icon" style="--tech-bg:rgba(59,130,246,.16)">R</div>
+            <h3>React</h3>
+            <p>Componentes dinámicos y reutilizables.</p>
+          </div>
+          <div class="card tech-card reveal" style="--delay:.15s">
+            <div class="tech-icon" style="--tech-bg:rgba(99,102,241,.16)">TS</div>
+            <h3>TypeScript</h3>
+            <p>Tipado estricto para más calidad.</p>
+          </div>
+          <div class="card tech-card reveal" style="--delay:.2s">
+            <div class="tech-icon" style="--tech-bg:rgba(14,165,164,.14)">TW</div>
+            <h3>Tailwind CSS</h3>
+            <p>Diseño flexible y consistente.</p>
+          </div>
+          <div class="card tech-card reveal" style="--delay:.25s">
+            <div class="tech-icon" style="--tech-bg:rgba(34,197,94,.16)">N</div>
+            <h3>Node.js</h3>
+            <p>Backend robusto y escalable.</p>
+          </div>
+          <div class="card tech-card reveal" style="--delay:.3s">
+            <div class="tech-icon" style="--tech-bg:rgba(245,158,11,.18)">M</div>
+            <h3>MongoDB</h3>
+            <p>Base de datos flexible.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="plan">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Plan</div>
+            <h2>Plan restaurante / bar / cafetería</h2>
+            <p>Una solución completa, clara y fácil de mantener.</p>
+          </div>
+        </div>
+
+        <div class="card plan-card" style="margin-top:18px">
+          <h3>Web base (1 página)</h3>
           <ul>
             <li>Diseño profesional responsive + publicación online.</li>
             <li>Secciones recomendadas: Inicio, Sobre nosotros, Menú/Carta, Galería y Contacto.</li>
@@ -401,125 +402,125 @@
             <li>Si el cliente se da de baja: se entrega una copia de la web (si está pagada) y la renovación del dominio pasa a ser responsabilidad del cliente.</li>
           </ul>
 
-          <div class="buy">
+          <div style="margin-top:16px">
             <a class="btn btn-primary" href="https://wa.me/34633936388?text=Hola%20Miguel%2C%20quisiera%20el%20Plan.%20Mi%20negocio%20es%20_____%20y%20estoy%20en%20_____." target="_blank" rel="noopener">Solicitar este plan</a>
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
-
-    <!-- Ejemplos -->
-    <div class="section" id="ejemplos">
-      <div class="title-row">
-        <h3>Ejemplos de páginas</h3>
-        <span>Trabajos y demos para mostrar a clientes</span>
-      </div>
-
-      <div class="grid grid-2">
-        <div class="card demo-card">
-          <div class="demo-head">
-            <h2>Ejemplo 1</h2>
+    <section class="section" id="portfolio">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Portfolio</div>
+            <h2>Ejemplos de páginas</h2>
+            <p>Diseños reales para enseñar a sus clientes.</p>
           </div>
-          <p>Diseño directo con información clave, WhatsApp y mapa.</p>
-          <a class="btn" href="https://im1gu1.github.io/demo-one-page" target="_blank" rel="noopener">Ver ejemplo</a>
         </div>
-        <div class="card demo-card">
-          <div class="demo-head">
-            <h2>Ejemplo 2</h2>
+
+        <div class="grid grid-2" style="margin-top:20px">
+          <div class="card demo-card">
+            <h3>Ejemplo 1</h3>
+            <p>Diseño directo con información clave, WhatsApp y mapa.</p>
+            <a class="btn btn-ghost" href="https://im1gu1.github.io/demo-one-page" target="_blank" rel="noopener">Ver ejemplo</a>
           </div>
-          <p>Restaurante con carta, reservas y contacto.</p>
-          <a class="btn" href="https://im1gu1.github.io/demo-business" target="_blank" rel="noopener">Ver ejemplo</a>
-        </div>
-        <div class="card demo-card">
-          <div class="demo-head">
-            <h2>Ejemplo 3</h2>
+          <div class="card demo-card">
+            <h3>Ejemplo 2</h3>
+            <p>Restaurante con carta, reservas y contacto.</p>
+            <a class="btn btn-ghost" href="https://im1gu1.github.io/demo-business" target="_blank" rel="noopener">Ver ejemplo</a>
           </div>
-          <p>Versión con más secciones y contenido.</p>
-          <a class="btn" href="https://im1gu1.github.io/demo-3" target="_blank" rel="noopener">Ver ejemplo</a>
-        </div>
-        <div class="card demo-card">
-          <div class="demo-head">
-            <h2>Ejemplo 4</h2>
+          <div class="card demo-card">
+            <h3>Ejemplo 3</h3>
+            <p>Versión con más secciones y contenido.</p>
+            <a class="btn btn-ghost" href="https://im1gu1.github.io/demo-3" target="_blank" rel="noopener">Ver ejemplo</a>
           </div>
-          <p>Web de burger con estilo potente y llamadas a la acción.</p>
-          <a class="btn" href="https://im1gu1.github.io/burger_website" target="_blank" rel="noopener">Ver ejemplo</a>
-        </div>
-        <div class="card demo-card">
-          <div class="demo-head">
-            <h2>Ejemplo 5</h2>
+          <div class="card demo-card">
+            <h3>Ejemplo 4</h3>
+            <p>Web de burger con estilo potente y llamadas a la acción.</p>
+            <a class="btn btn-ghost" href="https://im1gu1.github.io/burger_website" target="_blank" rel="noopener">Ver ejemplo</a>
           </div>
-          <p>Restaurante chino con menú claro y contacto visible.</p>
-          <a class="btn" href="https://im1gu1.github.io/demo-chino" target="_blank" rel="noopener">Ver ejemplo</a>
+          <div class="card demo-card">
+            <h3>Ejemplo 5</h3>
+            <p>Restaurante chino con menú claro y contacto visible.</p>
+            <a class="btn btn-ghost" href="https://im1gu1.github.io/demo-chino" target="_blank" rel="noopener">Ver ejemplo</a>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Clients -->
-    <div class="section" id="clientes">
-      <div class="title-row">
-        <h3>Clientes</h3>
-      </div>
+    <section class="section" id="clientes">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Clientes</div>
+            <h2>Empresas que ya confiaron</h2>
+          </div>
+        </div>
 
-      <div class="grid grid-2">
-        <div class="card">
-          <img src="assets/unoasat.png" alt="Logo de UNOASAT" style="width:64px;height:64px;object-fit:contain;display:block;margin-bottom:10px" />
-          <h2>UNOASAT</h2>
-          <p>Empresa que ya confió en mí para su web.</p>
-          <a class="btn" href="https://app.unoasat.es" target="_blank" rel="noopener">Ver web</a>
+        <div class="grid grid-2" style="margin-top:20px">
+          <div class="card">
+            <img src="assets/unoasat.png" alt="Logo de UNOASAT" style="width:64px;height:64px;object-fit:contain;margin-bottom:10px" />
+            <h3>UNOASAT</h3>
+            <p>Empresa que ya confió en mí para su web.</p>
+            <a class="btn btn-ghost" href="https://app.unoasat.es" target="_blank" rel="noopener">Ver web</a>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- FAQ -->
-    <div class="section" id="faq">
-      <div class="title-row">
-        <h3>Dudas típicas</h3>
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Dudas</div>
+            <h2>Preguntas frecuentes</h2>
+          </div>
+        </div>
+
+        <div class="grid" style="margin-top:18px">
+          <details>
+            <summary>Sobre mí</summary>
+            <p>Soy Miguel, desarrollador web independiente.</p>
+            <p>Trabajo desde Castellón ayudando a negocios locales a tener una web clara, rápida y profesional, sin complicaciones técnicas.</p>
+            <p>Me especializo en webs que cumplen su función: que sus clientes le encuentren, confíen en su negocio y le contacten fácilmente.</p>
+            <p>Trabajo con un modelo de cuota mensual para que no tenga que preocuparse de hosting, dominios ni mantenimiento. Yo me encargo de todo. Usted se centra en su negocio.</p>
+            <p>Si busca a alguien cercano, claro y responsable, está en el sitio correcto.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto tarda?</summary>
+            <p>Normalmente pocos días para una one-page, dependiendo de si ya dispone de fotos y textos.</p>
+          </details>
+          <details>
+            <summary>¿Qué necesita de mí?</summary>
+            <p>Nombre del negocio, horarios, servicios/menú, dirección y algunas fotos. Si no dispone, le ayudo.</p>
+          </details>
+          <details>
+            <summary>¿Puedo solicitar cambios?</summary>
+            <p>Sí. Ajustamos un borrador y dejamos la web como le guste, sin problemas.</p>
+          </details>
+          <details>
+            <summary>¿Incluye dominio y hosting?</summary>
+            <p>Sí. En los planes incluyo dominio, hosting y SSL. Usted se olvida de la parte técnica.</p>
+          </details>
+        </div>
       </div>
+    </section>
 
-      <div class="grid">
-        <details>
-          <summary>Sobre mí</summary>
-          <p>Soy Miguel, desarrollador web independiente.</p>
-          <p>Trabajo desde Castellón ayudando a negocios locales a tener una web clara, rápida y profesional, sin complicaciones técnicas.</p>
-          <p>Me especializo en webs que cumplen su función: que sus clientes le encuentren, confíen en su negocio y le contacten fácilmente.</p>
-          <p>Trabajo con un modelo de cuota mensual para que no tenga que preocuparse de hosting, dominios ni mantenimiento. Yo me encargo de todo. Usted se centra en su negocio.</p>
-          <p>Si busca a alguien cercano, claro y responsable, está en el sitio correcto.</p>
-        </details>
-        <details>
-          <summary>¿Cuánto tarda?</summary>
-          <p>Normalmente pocos días para una one-page, dependiendo de si ya dispone de fotos y textos.</p>
-        </details>
-        <details>
-          <summary>¿Qué necesita de mí?</summary>
-          <p>Nombre del negocio, horarios, servicios/menú, dirección y algunas fotos. Si no dispone, le ayudo.</p>
-        </details>
-        <details>
-          <summary>¿Puedo solicitar cambios?</summary>
-          <p>Sí. Ajustamos un borrador y dejamos la web como le guste, sin problemas.</p>
-        </details>
-        <details>
-          <summary>¿Incluye dominio y hosting?</summary>
-          <p>Sí. En los planes incluyo dominio, hosting y SSL. Usted se olvida de la parte técnica.</p>
-        </details>
+    <section class="cta-section" id="contacto">
+      <div class="wrap cta-box">
+        <div>
+          <h2>¿Hablamos de su web?</h2>
+          <p>Explíqueme su negocio y le propongo una solución clara y realista.</p>
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/34633936388"><img class="wa-icon" src="assets/whatsapp.png" alt="WhatsApp" />Contactar por WhatsApp</a>
       </div>
-    </div>
+    </section>
+  </main>
 
-    <div class="footer">
-      <div>© <span id="y"></span> MiWeb</div>
-      <div style="opacity:.9">Contacto: <a href="https://wa.me/34633936388">WhatsApp</a> · GitHub: <a href="https://github.com/iM1GU1">iM1GU1</a></div>
-    </div>
-  </div>
-
-  <!-- Floating CTA -->
-  <div class="floating">
-    <div class="bar">
-      <div>
-        <div style="font-weight:800">¿Quiere una web así para su negocio?</div>
-        <small>Le respondo por WhatsApp y le indico el precio sin compromiso</small>
-      </div>
-      <a class="btn btn-primary" href="https://wa.me/34633936388"><img class="wa-icon" src="assets/whatsapp.png" alt="WhatsApp" /> WhatsApp</a>
-    </div>
+  <div class="wrap footer">
+    <div>© <span id="y"></span> MiWeb</div>
+    <div>Contacto: <a href="https://wa.me/34633936388">WhatsApp</a> · GitHub: <a href="https://github.com/iM1GU1">iM1GU1</a></div>
   </div>
 
   <script>
@@ -527,4 +528,3 @@
   </script>
 </body>
 </html>
-
