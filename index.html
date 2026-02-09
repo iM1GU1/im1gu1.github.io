@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Webs modernas para negocios | iM1GU1</title>
   <meta name="description" content="Diseño y desarrollo webs modernas para negocios locales. Trato directo, entrega rápida y mantenimiento incluido." />
-  <meta name="theme-color" content="#f8f1e6" />
+  <meta name="theme-color" content="#efe3cf" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,12 +14,12 @@
 
   <style>
     :root{
-      --bg: #f8f1e6;
-      --surface: #fff9ef;
-      --surface-2: #f8eddc;
+      --bg: #efe3cf;
+      --surface: #f7ead8;
+      --surface-2: #eddcc5;
       --text: #0f172a;
       --muted: #334155;
-      --line: #e8d9c2;
+      --line: #d7c2a6;
       --primary: #0ea5a4;
       --primary-2: #22c55e;
       --accent: #f59e0b;
@@ -32,7 +32,7 @@
         radial-gradient(900px 600px at 90% 0%, rgba(245,158,11,.15), transparent 55%),
         radial-gradient(700px 520px at 50% 120%, rgba(14,165,164,.08), transparent 60%),
         var(--bg);
-      --header-bg: rgba(248,241,230,.9);
+      --header-bg: rgba(239,227,207,.92);
     }
 
     :root[data-theme="dark"]{
@@ -755,7 +755,7 @@
 
     root.setAttribute("data-theme", initialTheme);
     if (themeMeta) {
-      themeMeta.setAttribute("content", initialTheme === "dark" ? "#0b0f17" : "#f8f1e6");
+      themeMeta.setAttribute("content", initialTheme === "dark" ? "#0b0f17" : "#efe3cf");
     }
 
     if (themeToggle) {
@@ -765,7 +765,7 @@
         root.setAttribute("data-theme", next);
         localStorage.setItem("theme", next);
         if (themeMeta) {
-          themeMeta.setAttribute("content", next === "dark" ? "#0b0f17" : "#f8f1e6");
+          themeMeta.setAttribute("content", next === "dark" ? "#0b0f17" : "#efe3cf");
         }
       });
     }
