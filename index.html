@@ -280,20 +280,14 @@
     .plan-block.plan-highlight{
       background:var(--surface);
       border:1px solid var(--line);
+      border-style:solid;
       border-radius: var(--radius);
       padding:18px;
       box-shadow: var(--shadow-soft);
       position:relative;
       overflow:hidden;
     }
-    .plan-block::before{
-      content:"";
-      position:absolute;
-      inset:0 0 auto 0;
-      height:3px;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      opacity:.7;
-    }
+    .plan-block::before{display:none}
     .plan-block strong{
       color:var(--text);
       font-weight:700;
