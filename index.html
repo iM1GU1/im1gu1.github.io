@@ -127,7 +127,7 @@
       display:flex;align-items:center;gap:12px;
       font-weight:800;
     }
-    .brand img{height:62px;width:auto}
+    .brand img{height:120px;width:auto}
     .nav{
       display:flex;
       gap:32px;
@@ -187,7 +187,7 @@
 
     /* Hero */
     .hero{padding:48px 0 24px}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
     .eyebrow{
       display:inline-flex;align-items:center;gap:8px;
       background: var(--surface);
@@ -199,21 +199,15 @@
       font-family:"Fraunces", serif;
       font-size:46px;line-height:1.05;margin:16px 0 12px
     }
+    .hero-text h1,
+    .hero-text .lead{text-align:center}
     .lead{color:var(--muted);font-size:17px;max-width:56ch;margin:0 0 18px}
+    .hero-text .lead{margin:0 auto 18px}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
     .hero-points{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:12px;margin-top:18px}
     .point{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
     .point strong{display:block;font-size:14px}
     .point span{display:block;color:var(--muted);font-size:13px}
-    .hero-card{
-      background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);
-      padding:22px;box-shadow:var(--shadow)
-    }
-    .hero-card h3{margin:0 0 8px;font-size:18px}
-    .hero-card ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
-    .hero-card li{margin:6px 0}
-    .mini-card{margin-top:16px;padding:14px;border-radius:16px;background:var(--surface-2)}
-    .mini-card strong{display:block;margin-bottom:4px}
 
     /* Sections */
     .section{padding:32px 0}
@@ -361,12 +355,14 @@
     }
 
     @media (max-width: 980px){
+      .brand img{height:88px}
       .hero-grid{grid-template-columns:1fr}
       h1{font-size:38px}
       .hero-points{grid-template-columns:1fr}
       .grid-4{grid-template-columns:repeat(2, minmax(0,1fr))}
     }
     @media (max-width: 760px){
+      .brand img{height:52px}
       .nav{display:none}
       .hero{padding-top:32px}
       .grid-3,.grid-2{grid-template-columns:1fr}
@@ -412,7 +408,6 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-text reveal" style="--delay:.05s">
-          <div class="eyebrow">Diseño web para negocios locales</div>
           <h1>Webs modernas que convierten visitas en clientes reales</h1>
           <p class="lead">Soy Miguel y desarrollo webs claras, rápidas y con estrategia. Diseño, copy y publicación para que su negocio se vea profesional desde el primer día.</p>
           <div class="hero-actions">
@@ -435,19 +430,6 @@
           </div>
         </div>
 
-        <aside class="hero-card reveal" style="--delay:.15s">
-          <h3>Lo que entrego con su web</h3>
-          <ul>
-            <li>Diseño profesional responsive y publicación online.</li>
-            <li>Secciones clave para generar confianza y contactos.</li>
-            <li>Integraciones con Google Maps, WhatsApp y redes.</li>
-            <li>SEO básico para aparecer en búsquedas locales.</li>
-          </ul>
-          <div class="mini-card">
-            <strong>Trato cercano</strong>
-            <p>Soy desarrollador independiente y trabajo con usted de forma directa. Sin intermediarios ni historias.</p>
-          </div>
-        </aside>
       </div>
     </section>
 
