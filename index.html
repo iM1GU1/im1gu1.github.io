@@ -175,6 +175,28 @@
       background: linear-gradient(135deg, var(--primary), var(--primary-2));
     }
     .btn-ghost{background:transparent;box-shadow:none}
+    .btn-examples{
+      position:relative;
+      border-color:rgba(45,212,191,.78);
+      background:linear-gradient(135deg, rgba(45,212,191,.2), rgba(20,184,166,.08));
+      box-shadow:0 10px 24px rgba(20,184,166,.24);
+      overflow:visible;
+    }
+    .btn-examples::after{
+      content:"";
+      position:absolute;
+      inset:-5px;
+      border-radius:999px;
+      border:1px solid rgba(45,212,191,.45);
+      opacity:.55;
+      pointer-events:none;
+      animation:examplesPulse 2.2s ease-in-out infinite;
+    }
+    .btn-examples:hover{
+      border-color:rgba(45,212,191,.95);
+      background:linear-gradient(135deg, rgba(45,212,191,.28), rgba(20,184,166,.14));
+      box-shadow:0 14px 30px rgba(20,184,166,.3);
+    }
     .btn-outline{background:var(--surface);}
     .btn-sm{padding:8px 12px;font-size:13px;box-shadow:none}
     .wa-icon{width:18px;height:18px}
@@ -409,11 +431,16 @@
       from{transform:translateY(-8px)}
       to{transform:translateY(8px)}
     }
+    @keyframes examplesPulse{
+      0%,100%{transform:scale(1);opacity:.55}
+      50%{transform:scale(1.05);opacity:.15}
+    }
     .reveal{opacity:0;animation:rise .8s ease forwards;animation-delay:var(--delay, 0s)}
 
     @media (prefers-reduced-motion: reduce){
       .reveal{animation:none;opacity:1}
       .btn:hover{transform:none}
+      .btn-examples::after{animation:none;opacity:.25}
     }
 
     @media (max-width: 980px){
@@ -477,12 +504,12 @@
           <p class="lead">Soy Miguel y me dedico a hacer paginas webs personalizadas para empresas. Diseño adaptado para todo tipo de dispositivos, respuesta rapida y con estrategia SEO para posicionar en google. Si buscas una web para tu empresa estás en el lugar correcto.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="https://wa.me/34633936388">Solicitar presupuesto</a>
-            <a class="btn btn-ghost" href="#portfolio">Ver ejemplos</a>
+            <a class="btn btn-ghost btn-examples" href="#portfolio">Ver ejemplos</a>
           </div>
           <div class="hero-points">
             <div class="point">
               <strong>Entrega rápida</strong>
-              <span>Normalmente en 7-10 días</span>
+              <span>Normalmente en menos de una semana</span>
             </div>
             <div class="point">
               <strong>Contacto directo</strong>
@@ -490,7 +517,7 @@
             </div>
             <div class="point">
               <strong>Soporte real</strong>
-              <span>Respuesta en 24-48h laborables</span>
+              <span>Respuesta en menos de 24h laborables</span>
             </div>
           </div>
         </div>
